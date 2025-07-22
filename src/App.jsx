@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Menu from './components/shared/Menu'
 
 function App() {
 
   return (
     <>
-      <h1>Hola mundo!</h1>
+      <Menu />
     </>
   )
 }
