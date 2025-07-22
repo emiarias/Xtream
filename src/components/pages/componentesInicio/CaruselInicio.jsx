@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import '../../../Index.css'; // Ajusta la ruta según tu estructura
+import '../../../Index.css';
 
 const CaruselInicio = () => {
 

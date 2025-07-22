@@ -11,14 +11,14 @@ const Inicio = () => {
             {/* titulo principal */}
             <h1 className='text-center mb-3 mt-3'> Bienvenidos a Xtream </h1>
             <p>¡Comienza tu maratón de entretenimiento ahora!
-Descubre miles de películas y series exclusivas.
-¡Únete y vive la mejor experiencia!
-Explora, disfruta y comparte tus historias favoritas.
-Regístrate y accede a estrenos cada semana.
-¡No te pierdas lo mejor del cine y la TV, solo en Xtream!
-Tu próxima aventura comienza aquí.</p>
+                Descubre miles de películas y series exclusivas.
+                ¡Únete y vive la mejor experiencia!
+                Explora, disfruta y comparte tus historias favoritas.
+                Regístrate y accede a estrenos cada semana.
+                ¡No te pierdas lo mejor del cine y la TV, solo en Xtream!
+                Tu próxima aventura comienza aquí.</p>
             {/* select */}
-            <select className='form-select'>
+            <select className='form-select w-auto'>
                 <option value=''>Seleccione lo que deseas ver</option>
                 <option value='opcion1'>Drama </option>
                 <option value='opcion2'>Accion </option>
@@ -26,7 +26,7 @@ Tu próxima aventura comienza aquí.</p>
                 <option value='opcion3'>Animacion </option>
                 <option value='opcion3'>Comedia</option>
                 <option value='opcion3'>Ver en familia</option>
-            </select>    
+            </select>
         </>
     );
 };
