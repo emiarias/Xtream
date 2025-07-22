@@ -10,11 +10,11 @@ const Login = () => {
 
   return (
     <section className="container">
-      <h1 className="my-3 text-center tinos">Inicia sesión</h1>
-      <Row xs={1} md={2}>
-        <Col>
+      <Row xs={1} md={2} className="align-items-center">
+        <Col className="mb-3">
+        <h1 className="my-5 text-center text-md-start tinos">Inicia sesión</h1>
           <Form className="raleway" onSubmit={handleSubmit((e)=>e.preventDefault)}>
-            <Form.Group className="mt-3">
+            <Form.Group className="">
               <Form.Label>Correo electrónico</Form.Label>
               <Form.Control
                 type="email"
@@ -64,7 +64,8 @@ const Login = () => {
             </Button>
           </Form>
         </Col>
-        <Col></Col>
+        <Col>
+        <img src="https://ca-times.brightspotcdn.com/dims4/default/f507332/2147483647/strip/true/crop/3000x2000+0+0/resize/1200x800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F08%2Fa2%2Fe47e812707a40774a24e6e8f6657%2F95ecd52380214c35b1cca6dbc1d8a643" alt="Últimos estrenos de 2025" className="img-fluid"/></Col>
       </Row>
     </section>
   );
