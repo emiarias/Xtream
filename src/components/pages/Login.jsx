@@ -14,7 +14,7 @@ const Login = () => {
         <Col className="mb-3">
         <h1 className="my-5 text-center text-md-start tinos">Inicia sesión</h1>
           <Form className="raleway" onSubmit={handleSubmit((e)=>e.preventDefault)}>
-            <Form.Group className="">
+            <Form.Group>
               <Form.Label>Correo electrónico</Form.Label>
               <Form.Control
                 type="email"
