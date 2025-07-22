@@ -22,6 +22,8 @@ const Contacto = () => {
               <Form.Control
                 type="text"
                 placeholder="Ej: Juan Perez"
+                minLength={2}
+                maxLength={100}
                 {...register("nombre", {
                   required: "El nombre es un dato obligatorio",
                   minLength: {
@@ -43,6 +45,8 @@ const Contacto = () => {
               <Form.Control
                 type="email"
                 placeholder="Ej: juan2025@mail.com"
+                minLength={4}
+                maxLength={100}
                 {...register("email", {
                   required: "El correo electrónico es un dato obligatorio",
                   pattern: {
@@ -53,11 +57,13 @@ const Contacto = () => {
                   },
                   minLength: {
                     value: 4,
-                    message: "El correo electrónico debe tener un mínimo de 4 caracteres",
+                    message:
+                      "El correo electrónico debe tener un mínimo de 4 caracteres",
                   },
                   maxLength: {
                     value: 100,
-                    message: "El correo electrónico debe tener un máximo de 100 caracteres",
+                    message:
+                      "El correo electrónico debe tener un máximo de 100 caracteres",
                   },
                 })}
               ></Form.Control>
@@ -70,6 +76,8 @@ const Contacto = () => {
               <Form.Control
                 type="number"
                 placeholder="Ej: +543813444100"
+                minLength={8}
+                maxLength={19}
                 {...register("telefono", {
                   required: "El número de teléfono es un dato obligatorio",
                   pattern: {
@@ -79,11 +87,13 @@ const Contacto = () => {
                   },
                   minLength: {
                     value: 8,
-                    message: "El número de teléfono debe tener un mínimo de 8 caracteres",
+                    message:
+                      "El número de teléfono debe tener un mínimo de 8 caracteres",
                   },
                   maxLength: {
                     value: 19,
-                    message: "El correo electrónico debe tener un máximo de 19 caracteres",
+                    message:
+                      "El correo electrónico debe tener un máximo de 19 caracteres",
                   },
                 })}
               ></Form.Control>
@@ -120,10 +130,34 @@ const Contacto = () => {
               </Form.Text>
             </Form.Group>
             <Form.Group className="mt-3">
-              <Form.Label>Ingrese su consulta*</Form.Label>
+              <Form.Label>Consulta*</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ingrese su consulta"
+                as="textarea"
+                rows={4}
+                minLength={4}
+                maxLength={300}
+                {...register("consulta", {
+                  required: "La consulta es un campo obligatorio",
+                  minLength: {
+                    value: 4,
+                    message:
+                      "La consulta debe tener un mínimo de 4 caracteres",
+                  },
+                  maxLength: {
+                    value: 300,
+                    message:
+                      "La consulta debe tener un máximo de 300 caracteres",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.consulta?.message}
+              </Form.Text>
             </Form.Group>
             <Button variant="success" type="submit" className="mt-4">
-              Iniciar sesión
+              Enviar
             </Button>
           </Form>
         </Col>
