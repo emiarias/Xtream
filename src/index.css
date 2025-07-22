@@ -20,40 +20,41 @@
 }
 
 .color-logo-nav {
-    color: rgba(10, 14, 15, 1) !important;
+  color: rgba(10, 14, 15, 1) !important;
 }
 
 .buscadorNav {
-    background: #fff !important;
+  background: #fff !important;
 }
 .boton-hamburguesa {
-    background-color: rgba(10, 14, 15) !important;
-    border: 1px solid #fff !important;
+  background-color: rgba(10, 14, 15) !important;
+  border: 1px solid #fff !important;
 }
 
 @media (max-width: 991px) {
-    .nav-link {
-        color: black !important;
-    }
+  .nav-link {
+    color: black !important;
+  }
 
-    .nav-link:hover {
-        color: #fff !important;
-    }
-.fuenteLogo{
+  .nav-link:hover {
+    color: #fff !important;
+  }
+  .fuenteLogo {
     font-family: "Permanent Marker", serif;
-}
+  }
 
-/* Cambia el color de las flechas del carrusel a blanco */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) brightness(2) !important;
-}
+  /* Cambia el color de las flechas del carrusel a blanco */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1) brightness(2) !important;
+  }
 
-/* Cambia el color de los indicadores (rallitas) del carrusel */
-.carousel-indicators [data-bs-target] {
-  background-color: #fff !important;
-  opacity: 1 !important;
-}
-.carousel-indicators .active {
-  background-color: #4ade80 !important;
+  /* Cambia el color de los indicadores (rallitas) del carrusel */
+  .carousel-indicators [data-bs-target] {
+    background-color: #fff !important;
+    opacity: 1 !important;
+  }
+  .carousel-indicators .active {
+    background-color: #4ade80 !important;
+  }
 }
