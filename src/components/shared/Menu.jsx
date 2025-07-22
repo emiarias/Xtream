@@ -25,9 +25,9 @@ const Menu = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="boton-hamburguesa" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex justify-content-end w-100 nav-link">
-              <Nav.Link href="#home" className="fuenteLogo">Inicio</Nav.Link>
-              <Nav.Link href="#link" className="fuenteLogo">Login</Nav.Link>
-              <Nav.Link href="#" className="fuenteLogo">Crea tu cuenta</Nav.Link>
+              <Nav.Link href="#home" className="tinos">Inicio</Nav.Link>
+              <Nav.Link href="#link" className="tinos">Login</Nav.Link>
+              <Nav.Link href="#" className="tinos">Crea tu cuenta</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
