@@ -13,7 +13,7 @@ const Login = () => {
       <h1 className="my-3 text-center tinos">Inicia sesión</h1>
       <Row xs={1} md={2}>
         <Col>
-          <Form className="raleway">
+          <Form className="raleway" onSubmit={handleSubmit((e)=>e.preventDefault)}>
             <Form.Group className="mt-3">
               <Form.Label>Correo electrónico</Form.Label>
               <Form.Control
