@@ -23,9 +23,9 @@ const Inicio = () => {
                 <option value='opcion1'>Drama </option>
                 <option value='opcion2'>Accion </option>
                 <option value='opcion3'>Terror </option>
-                <option value='opcion3'>Animacion </option>
-                <option value='opcion3'>Comedia</option>
-                <option value='opcion3'>Ver en familia</option>
+                <option value='opcion4'>Animacion </option>
+                <option value='opcion5'>Comedia</option>
+                <option value='opcion6'>Ver en familia</option>
             </select>
         </>
     );
