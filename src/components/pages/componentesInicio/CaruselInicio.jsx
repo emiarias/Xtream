@@ -7,42 +7,30 @@ const CaruselInicio = () => {
     <>
       <Carousel>
         <Carousel.Item>
-  <img 
-    className='w-100 img-fluid'
-    style={{ maxHeight: '400px', objectFit: 'cover' }}
-    src="" 
-    alt="Familia viendo película en casa" 
-  />
-  <Carousel.Caption>
-    <h3 className='text-white'>Disfruta en familia o solo</h3>
-  </Carousel.Caption>
-</Carousel.Item>
-
-<Carousel.Item>
-  <img 
-    className='w-100 img-fluid'
-    style={{ maxHeight: '400px', objectFit: 'cover' }}
-    src="" 
-    alt="Pantalla de cine con butacas vacías" 
-  />
-  <Carousel.Caption>
-    <h3 className='text-white'>Estrenos exclusivos cada semana</h3>
-  </Carousel.Caption>
-</Carousel.Item>
-
-<Carousel.Item>
-  <img 
-    className='w-100 img-fluid'
-    style={{ maxHeight: '400px', objectFit: 'cover' }}
-    src="" 
-    alt="Control remoto y palomitas frente a TV" 
-  />
-  <Carousel.Caption>
-    <h3 className='text-white'>Tu maratón perfecto comienza aquí</h3>
-  </Carousel.Caption>
-</Carousel.Item>
+          <img
+            className='w-100 img-fluid'
+            style={{ maxHeight: '400px', objectFit: 'cover' }}
+            src="https://t2.tudocdn.net/687837?w=824&h=494"
+            alt="historias de superueres"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className='w-100 img-fluid'
+            style={{ maxHeight: '400px', objectFit: 'cover' }}
+            src="https://disneyplusbrasil.com.br/wp-content/uploads/2020/11/perfil-comum-1024x487.jpg"
+            alt="perfil de usuarios con animaciones "
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className='w-100 img-fluid'
+            style={{ maxHeight: '400px', objectFit: 'cover' }}
+            src="https://telaviva.com.br/wp-content/uploads/2022/05/streaming.jpg"
+            alt="dinujos animados de peliculas y cine para compartir en familia"
+          />
+        </Carousel.Item>
       </Carousel>
-
     </>
   );
 };
