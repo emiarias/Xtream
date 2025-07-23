@@ -74,8 +74,8 @@ const Menu = () => {
       </header>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>
-            ¿Quieres ver Xtream ya? completa los campos para crear una cuenta
+          <Modal.Title className="text-center w-100">
+            ¿Quieres ver Xtream ya?<br /> ¡Crea tu cuenta en 3 pasos!
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -94,7 +94,7 @@ const Menu = () => {
               <FormLabel>Nombre Usuario</FormLabel>
               <FormControl
                 type="text"
-                placeholder="ej: user1"
+                placeholder="Ej: user1"
                 maxLength={10}
                 min={5}
                 {...register("text", {
@@ -163,7 +163,7 @@ const Menu = () => {
             </Form.Group>
             <FormGroup className="d-flex justify-content-end">
               <Button variant="success" type="submit">
-                Crear
+                Crear Cuenta
               </Button>
             </FormGroup>
           </Form>
