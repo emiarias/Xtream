@@ -8,12 +8,14 @@ import { Button, FormControl, FormGroup, FormLabel } from "react-bootstrap";
 import { NavLink } from "react-router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 import Modal from "react-bootstrap/Modal";
 
 const Menu = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -77,15 +79,35 @@ const Menu = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={handleSubmit((e) => e.preventDefault)}>
+          <Form
+            onSubmit={handleSubmit((e) => {
+              e.preventDefault;
+              Swal.fire({
+                title: "Cuenta Creada!",
+                text: "Tu cuenta ha sido creada exitosamente!",
+                icon: "success",
+              });
+              reset();
+            })}
+          >
             <FormGroup className="mb-3" controlId="formBasicNombreUsuario">
-              <FormLabel>
-                Nombre Usuario
-              </FormLabel>
+              <FormLabel>Nombre Usuario</FormLabel>
               <FormControl
                 type="text"
-                placeholder="ej: user1">
-              </FormControl>
+                placeholder="ej: user1"
+                maxLength={10}
+                min={5}
+                {...register("text", {
+                  required: "El nombre de usuario es un dato obligatorio",
+                  pattern: {  
+                    message:
+                      "El nombre debe tener entre 8 y 16 caracteres, al menos un dígito",
+                  },
+                })}
+              ></FormControl>
+              <Form.Text className="text-danger">
+                {errors.text?.message}
+              </Form.Text>
             </FormGroup>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
@@ -120,11 +142,28 @@ const Menu = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Contraseña</Form.Label>
-              <Form.Control type="password" placeholder="Ingresa tu contraseña" />
+              <Form.Control
+                type="password"
+                placeholder="Ingresa tu contraseña"
+                maxLength={16}
+                min={8}
+                {...register("password", {
+                  required: "La contraseña es un dato obligatorio",
+                  pattern: {
+                    value:
+                      /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
+                    message:
+                      "La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico.",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.password?.message}
+              </Form.Text>
             </Form.Group>
             <FormGroup className="d-flex justify-content-end">
               <Button variant="success" type="submit">
-                Save Changes
+                Crear
               </Button>
             </FormGroup>
           </Form>
