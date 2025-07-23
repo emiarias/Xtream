@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Menu from './components/shared/Menu'
 import Footer from "./components/shared/Footer";
 import Inicio from './components/pages/Inicio';
+import Contacto from './components/pages/Contacto';
 import Login from './components/pages/Login';
 import DetallePelicula from './components/pages/DetallePelicula';
 import Administrador from './components/pages/Administrador';
@@ -19,7 +20,7 @@ function App() {
           <Route path="/" element={<Inicio></Inicio>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/detalle" element={<DetallePelicula></DetallePelicula>}></Route>
-          {/* <Route path="/contacto" element={<Contacto></Contacto>}></Route> */}
+          <Route path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route path="/acercadenosotros" element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>
           <Route path="/administrador" element={<Administrador></Administrador>}></Route>
           {/* <Route path="/*" element={<Error404></Error404>}></Route> */}
