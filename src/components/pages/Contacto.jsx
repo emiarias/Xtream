@@ -1,28 +1,43 @@
 import { Col, Form, Row, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const Contacto = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   return (
     <section className="container">
       <h1 className="my-5 text-center tinos">Contacto</h1>
-      <Row xs={1} md={2}>
+      <Row xs={1} md={2} className="align-items-center">
         <Col>
           <article>
-            <h2 className="fuenteLogo text-center" style={{color: "#00e701"}}>Xtream</h2>
+            <h2 className="fuenteLogo text-center" style={{ color: "#00e701" }}>
+              Xtream
+            </h2>
             <p className="text-center fs-6">Atención al público 24/7</p>
-            <p className="text-center fs-6">Escríbenos tu consulta</p>
+            <img
+              src="https://images.pexels.com/photos/5453836/pexels-photo-5453836.jpeg"
+              className="img-fluid rounded mt-md-4 my-4"
+              alt="Soporte tecnico las 24 horas"
+            />
           </article>
         </Col>
         <Col className="mb-3">
           <Form
             className="raleway"
-            onSubmit={handleSubmit((e) => e.preventDefault)}
+            onSubmit={handleSubmit(() => {
+              Swal.fire({
+                title: "Consulta enviada!",
+                text: "Nos pondremos en contacto contigo en breve",
+                icon: "success",
+              });
+              reset()
+            })}
           >
             <Form.Group>
               <Form.Label>Nombre y apellido*</Form.Label>
@@ -88,7 +103,7 @@ const Contacto = () => {
                 {...register("telefono", {
                   required: "El número de teléfono es un dato obligatorio",
                   pattern: {
-                    value: /^\+\d{1,4} ?\d{6,14}$/,
+                    value: /\d{1,4}?\d{6,14}$/,
                     message:
                       "El número de teléfono debe comenzar con '+', seguido del código de país y el número sin espacios ni símbolos. Ej: +541112345678",
                   },
@@ -100,7 +115,7 @@ const Contacto = () => {
                   maxLength: {
                     value: 19,
                     message:
-                      "El correo electrónico debe tener un máximo de 19 caracteres",
+                      "El número de teléfono debe tener un máximo de 19 caracteres",
                   },
                 })}
               ></Form.Control>
@@ -149,8 +164,7 @@ const Contacto = () => {
                   required: "La consulta es un campo obligatorio",
                   minLength: {
                     value: 4,
-                    message:
-                      "La consulta debe tener un mínimo de 4 caracteres",
+                    message: "La consulta debe tener un mínimo de 4 caracteres",
                   },
                   maxLength: {
                     value: 300,
