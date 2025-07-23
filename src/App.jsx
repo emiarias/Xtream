@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Menu from './components/shared/Menu'
+import Footer from "./components/shared/Footer";
 import Inicio from './components/pages/Inicio';
 import Login from './components/pages/Login';
 import DetallePelicula from './components/pages/DetallePelicula';
 import Administrador from './components/pages/Administrador';
 import AcercaDeNosotros from './components/pages/AcercaDeNosotros';
+import { BrowserRouter, Route, Routes } from 'react-router';
 
 function App() {
 
