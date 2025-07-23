@@ -1,26 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.tinos{
-    font-family: "Tinos", serif;
+.tinos {
+  font-family: "Tinos", serif;
 }
-.raleway{
-    font-family: "Raleway", serif;
+.raleway {
+  font-family: "Raleway", serif;
 }
-.fuenteLogo{
-    font-family: "Permanent Marker", serif;
-}
-
-/* Cambia el color de las flechas del carrusel a blanco */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) brightness(2) !important;
+.fuenteLogo {
+  font-family: "Permanent Marker", serif;
 }
 
-/* Cambia el color de los indicadores (rallitas) del carrusel */
-.carousel-indicators [data-bs-target] {
-  background-color: #fff !important;
-  opacity: 1 !important;
+.colorNav {
+  background: #00e701;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 231, 1, 1) 10%,
+    rgba(10, 14, 15, 1) 100%
+  );
 }
-.carousel-indicators .active {
-  background-color: #4ade80 !important;
+
+.color-logo-nav {
+  color: rgba(10, 14, 15, 1) !important;
 }
+
+.buscadorNav {
+  background: #fff !important;
+}
+.boton-hamburguesa {
+  background-color: rgba(10, 14, 15) !important;
+  border: 1px solid #fff !important;
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    color: black !important;
+  }
+
+  .nav-link:hover {
+    color: #fff !important;
+  }
+
+  .boton-logout {
+    background-color: rgb(1, 128, 255) !important;
+  }
+}
+
+  /* Cambia el color de las flechas del carrusel a blanco */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1) brightness(2) !important;
+  }
+
+  /* Cambia el color de los indicadores (rallitas) del carrusel */
+  .carousel-indicators [data-bs-target] {
+    background-color: #fff !important;
+    opacity: 1 !important;
+  }
+  .carousel-indicators .active {
+    background-color: #4ade80 !important;
+  }
