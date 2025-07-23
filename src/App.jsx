@@ -8,13 +8,17 @@ import DetallePelicula from './components/pages/DetallePelicula';
 import Administrador from './components/pages/Administrador';
 import AcercaDeNosotros from './components/pages/AcercaDeNosotros';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import { useState } from 'react';
 
 function App() {
+
+const userLogueado = sessionStorage.getItem("userKey") || false
+const [adminUser, setAdminUser] = useState(userLogueado)
 
   return (
     <>
       <BrowserRouter>
-      <Menu></Menu>
+      <Menu adminUser={adminUser}></Menu>
       <main>
         <Routes>
           <Route path="/" element={<Inicio></Inicio>}></Route>

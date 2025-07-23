@@ -5,14 +5,14 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Button } from "react-bootstrap";
-import { NavLink } from "react-router";
+import { NavLink, Link } from "react-router";
 
-const Menu = () => {
+const Menu = ({adminUser}) => {
   return (
     <header>
       <Navbar expand="lg" className="colorNav">
         <Container>
-          <Navbar.Brand  className="fuenteLogo color-logo-nav">Xtream</Navbar.Brand>
+          <Navbar.Brand  as={Link} to={"/"} className="fuenteLogo color-logo-nav">Xtream</Navbar.Brand>
           <Form className="w-50 d-flex justify-content-center">
             <Row>
               <Col xs="auto">
@@ -28,10 +28,19 @@ const Menu = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex justify-content-end w-100 nav-link">
               <NavLink to={"/"} className="tinos nav-link">Inicio</NavLink>
-              <NavLink  to={"/login"} className="tinos nav-link">Login</NavLink>
-              <NavLink to={"/administrador"} className="tinos nav-link">Administrador</NavLink>
-              <NavLink className="tinos nav-link">Crea tu cuenta</NavLink>
-              <Button className="tinos nav-link boton-logout w-25">Logout</Button>
+              {
+               adminUser? (
+                <>
+                <NavLink to={"/administrador"} className="tinos nav-link">Administrador</NavLink>
+                <Button className="tinos nav-link boton-logout w-25">Logout</Button>
+                </>
+               ) : (
+                <>
+                <NavLink  to={"/login"} className="tinos nav-link">Login</NavLink>
+                <Button className="tinos nav-link">Crea tu cuenta</Button>
+                </>
+               )
+              }
             </Nav>
           </Navbar.Collapse>
         </Container>
