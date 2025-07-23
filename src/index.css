@@ -1,0 +1,16 @@
+/* index.css */
+
+.page-wrapper {
+  min-height: 100vh; /* altura total viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center; /* centrado vertical */
+  justify-content: center; /* centrado horizontal */
+  background-color: #f8f9fa; /* fondo claro */
+  padding: 20px;
+}
