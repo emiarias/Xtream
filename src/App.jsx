@@ -8,9 +8,10 @@ import DetallePelicula from './components/pages/DetallePelicula';
 import Administrador from './components/pages/Administrador';
 import AcercaDeNosotros from './components/pages/AcercaDeNosotros';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import Error404 from "./components/pages/Error404";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -23,7 +24,7 @@ function App() {
           <Route path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route path="/acercadenosotros" element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>
           <Route path="/administrador" element={<Administrador></Administrador>}></Route>
-          {/* <Route path="/*" element={<Error404></Error404>}></Route> */}
+          <Route path="/*" element={<Error404></Error404>}></Route>
         </Routes>
       </main>
       <Footer></Footer>
@@ -32,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

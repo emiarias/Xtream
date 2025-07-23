@@ -1,0 +1,31 @@
+/* src/components/Footer.css */
+
+/* Estilos para los enlaces de texto */
+.footer-link {
+  text-decoration: none; /* Quita el subrayado */
+  transition: color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.footer-link:hover {
+  color: #00FF00 !important; /* El verde vibrante de Xtream para el hover */
+}
+
+/* Estilos para los enlaces de iconos de redes sociales */
+.footer-icon-link {
+  text-decoration: none; /* Quita el subrayado */
+  transition: color 0.3s ease, transform 0.2s ease; /* Transición para color y tamaño */
+}
+
+.footer-icon-link:hover {
+  color: #00FF00 !important; /* El verde vibrante de Xtream para el hover */
+  transform: translateY(-3px); /* Pequeño efecto de elevación al pasar el mouse */
+}
+
+/* Puedes añadir más estilos aquí para el footer si es necesario */
+
+.footer-brand {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2.5rem;
+  color: #00e701; /* o el verde que quieras */
+  margin-bottom: 0.5rem;
+}
