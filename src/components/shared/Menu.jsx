@@ -19,7 +19,7 @@ const Menu = () => {
                 <Form.Control
                   type="text"
                   placeholder="Buscar"
-                  className="buscadorNav"
+                  className="buscadorNav" 
                 />
               </Col>
             </Row>
