@@ -19,6 +19,8 @@ const Login = () => {
               <Form.Control
                 type="email"
                 placeholder="Ej: juan2025@mail.com"
+                maxLength={100}
+                min={5}
                 {...register("email", {
                   required: "El correo electrónico es un dato obligatorio",
                   pattern: {
@@ -27,6 +29,16 @@ const Login = () => {
                     message:
                       "El correo electrónico debe tener un formato válido, por ejemplo juan2025@mail.com",
                   },
+                  minLength: {
+                value: 5,
+                message:
+                  "La descrición amplia debe tener almenos 5 caracteres",
+              },
+              maxLength: {
+                value: 100,
+                message:
+                  "La descrición amplia debe tener como máximo 100 caracteres",
+              },
                 })}
               ></Form.Control>
               <Form.Text className="text-danger">
@@ -38,6 +50,8 @@ const Login = () => {
               <Form.Control
                 type="password"
                 placeholder="Ingresa tu contraseña"
+                maxLength={16}
+                min={8}
                 {...register("password", {
                   required: "La contraseña es un dato obligatorio",
                   pattern: {
