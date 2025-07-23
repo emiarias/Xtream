@@ -22,7 +22,7 @@ const [adminUser, setAdminUser] = useState(userLogueado)
       <main>
         <Routes>
           <Route path="/" element={<Inicio></Inicio>}></Route>
-          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/login" element={<Login setAdminUser={setAdminUser}></Login>}></Route>
           <Route path="/detalle" element={<DetallePelicula></DetallePelicula>}></Route>
           <Route path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route path="/acercadenosotros" element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>
