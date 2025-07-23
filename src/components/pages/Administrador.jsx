@@ -1,4 +1,5 @@
 import { Button, Table } from 'react-bootstrap';
+import ItemPelicula from './componentesAdministrador/ItemPelicula';
 
 const Administrador = () => {
     return (
@@ -24,12 +25,13 @@ const Administrador = () => {
             <th>ID</th>
             <th>Nombre</th>
             <th>Tipo</th>
-            <th>Poster</th>
+            <th>Año de estreno</th>
             <th>Género</th>
             <th>Opciones</th>
           </tr>
         </thead>
         <tbody>
+            <ItemPelicula></ItemPelicula>
         </tbody>
       </Table>
         </section>
