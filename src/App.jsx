@@ -18,7 +18,7 @@ const [adminUser, setAdminUser] = useState(userLogueado)
   return (
     <>
       <BrowserRouter>
-      <Menu adminUser={adminUser}></Menu>
+      <Menu adminUser={adminUser} setAdminUser={setAdminUser}></Menu>
       <main>
         <Routes>
           <Route path="/" element={<Inicio></Inicio>}></Route>
