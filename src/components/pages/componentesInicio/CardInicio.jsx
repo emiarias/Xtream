@@ -21,7 +21,7 @@ const CardInicio = () => {
                                 variant="top"
                                 src="https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.progressive.jpg?v=1573587596"
                                 alt="Póster de Matrix"
-                                style={{ height: '400px', objectFit: 'cover' }}
+                                className='img-fluid'
                             />
                             <Card.Body>
                                 <Card.Title>Matrix</Card.Title>
