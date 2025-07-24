@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Menu from './components/shared/Menu'
 import Footer from "./components/shared/Footer";
 import Inicio from './components/pages/Inicio';
