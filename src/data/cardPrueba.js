@@ -1,38 +1,246 @@
-  const cardsData = [
-    {
-      title: "Matrix",
-      image: "https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.progressive.jpg?v=1573587596",
-      description: "Película de acción y fantasía sobre la realidad simulada.",
-      alt: "Póster de Matrix"
-    },
-    {
-      title: "El Padrino",
-      image: "https://www.movieposters.com/cdn/shop/products/godfather.2436_480x.progressive.jpg?v=1654018929",
-      description: "Clásico del cine sobre la familia mafiosa Corleone.",
-      alt: "Póster de El Padrino"
-    },
-    {
-      title: "Interestelar",
-      image: "https://www.movieposters.com/cdn/shop/products/interstellar_2014_advance_small_480x.progressive.jpg?v=1573656827",
-      description: "Episodio épico de ciencia ficción sobre el espacio y el tiempo.",
-      alt: "Póster de Interestelar"
-    },
-    {
-      title: "Parásitos",
-      image: "https://www.movieposters.com/cdn/shop/products/parasite_480x.progressive.jpg?v=1582783814",
-      description: "Thriller dramático sobre las diferencias sociales en Corea.",
-      alt: "Póster de Parásitos"
-    },
-    {
-      title: "Titanic",
-      image: "https://www.movieposters.com/cdn/shop/products/titanic.2433_480x.progressive.jpg?v=1654018929",
-      description: "Historia de amor épica en el famoso barco hundido.",
-      alt: "Póster de Titanic"
-    },
-    {
-      title: "Jurassic Park",
-      image: "https://www.movieposters.com/cdn/shop/products/jurassicpark.2432_480x.progressive.jpg?v=1654018929",
-      description: "Aventura con dinosaurios clonados en una isla remota.",
-      alt: "Póster de Jurassic Park"
-    }
-  ];
+// car de pruebas de peliculas y series
+const cardsData = [
+  // Películas
+  {
+    id: 1,
+    title: "Matrix",
+    image: "https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.progressive.jpg?v=1573587596",
+    description_breve: "Película de acción y fantasía sobre la realidad simulada.",
+    description_amplia: "Un hacker descubre que su realidad es una simulación creada por máquinas inteligentes y se une a la rebelión para liberar a la humanidad.",
+    alt: "Póster de Matrix",
+    type: "pelicula",
+    genre: ["ciencia ficción", "acción"],
+    year: 1999,
+    director: "Lana y Lilly Wachowski"
+  },
+  {
+    id: 2,
+    title: "El Padrino",
+    image: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    description_breve: "Drama sobre la familia criminal Corleone.",
+    description_amplia: "El patriarca de una familia mafiosa transfiere el control de su imperio clandestino a su reacio hijo menor.",
+    alt: "Póster de El Padrino",
+    type: "pelicula",
+    genre: ["drama", "crimen"],
+    year: 1972,
+    director: "Francis Ford Coppola"
+  },
+  {
+    id: 3,
+    title: "Interestelar",
+    image: "https://m.media-amazon.com/images/I/91kFY9mWcrL._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Viaje espacial para encontrar un nuevo hogar para la humanidad.",
+    description_amplia: "Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad, mientras exploran los efectos relativistas del viaje espacial.",
+    alt: "Póster de Interestelar",
+    type: "pelicula",
+    genre: ["ciencia ficción", "aventura"],
+    year: 2014,
+    director: "Christopher Nolan"
+  },
+  {
+    id: 4,
+    title: "Parásitos",
+    image: "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+    description_breve: "Drama sobre las diferencias sociales en Corea del Sur.",
+    description_amplia: "Los miembros de una familia pobre se infiltran en los círculos de una familia adinerada, lo que lleva a consecuencias inesperadas.",
+    alt: "Póster de Parásitos",
+    type: "pelicula",
+    genre: ["drama", "thriller"],
+    year: 2019,
+    director: "Bong Joon-ho"
+  },
+  {
+    id: 5,
+    title: "El Señor de los Anillos: La Comunidad del Anillo",
+    image: "https://m.media-amazon.com/images/I/71X6YzwV0gL._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Aventura épica en la Tierra Media.",
+    description_amplia: "Un hobbit recibe la misión de destruir un poderoso anillo antes de que caiga en manos del Señor Oscuro Sauron.",
+    alt: "Póster de El Señor de los Anillos",
+    type: "pelicula",
+    genre: ["aventura", "fantasía"],
+    year: 2001,
+    director: "Peter Jackson"
+  },
+  {
+    id: 6,
+    title: "Titanic",
+    image: "https://m.media-amazon.com/images/I/71kAW7aXw6L._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Historia de amor en el famoso transatlántico.",
+    description_amplia: "Una joven de alta sociedad y un artista pobre se enamoran a bordo del lujoso pero desafortunado RMS Titanic.",
+    alt: "Póster de Titanic",
+    type: "pelicula",
+    genre: ["drama", "romance"],
+    year: 1997,
+    director: "James Cameron"
+  },
+  {
+    id: 7,
+    title: "Jurassic Park",
+    image: "https://m.media-amazon.com/images/I/71Q9H7QM5ZL._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Dinosaurios revividos mediante ingeniería genética.",
+    description_amplia: "Un parque temático con dinosaurios clonados se convierte en una pesadilla cuando los animales escapan de sus recintos.",
+    alt: "Póster de Jurassic Park",
+    type: "pelicula",
+    genre: ["aventura", "ciencia ficción"],
+    year: 1993,
+    director: "Steven Spielberg"
+  },
+  {
+    id: 8,
+    title: "Pulp Fiction",
+    image: "https://m.media-amazon.com/images/I/71c05lTE03L._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Historias interconectadas de crimen en Los Ángeles.",
+    description_amplia: "Las vidas de dos mafiosos, un boxeador, la esposa de un gánster y un par de bandidos se entrelazan en cuatro historias de violencia y redención.",
+    alt: "Póster de Pulp Fiction",
+    type: "pelicula",
+    genre: ["crimen", "drama"],
+    year: 1994,
+    director: "Quentin Tarantino"
+  },
+  {
+    id: 9,
+    title: "El Laberinto del Fauno",
+    image: "https://m.media-amazon.com/images/I/81xX7QMz3UL._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Fantasía oscura ambientada en la posguerra española.",
+    description_amplia: "En la España de 1944, una niña se refugia en un misterioso laberinto para escapar de su cruel padrastro, un capitán del ejército.",
+    alt: "Póster de El Laberinto del Fauno",
+    type: "pelicula",
+    genre: ["fantasía", "drama"],
+    year: 2006,
+    director: "Guillermo del Toro"
+  },
+  {
+    id: 10,
+    title: "Inception",
+    image: "https://m.media-amazon.com/images/I/71M0WFPNebL._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Ciencia ficción sobre el mundo de los sueños.",
+    description_amplia: "Un ladrón que roba secretos corporativos mediante el uso de tecnología para compartir sueños recibe la tarea inversa de implantar una idea en la mente de un objetivo.",
+    alt: "Póster de Inception",
+    type: "pelicula",
+    genre: ["ciencia ficción", "acción"],
+    year: 2010,
+    director: "Christopher Nolan"
+  },
+
+  // Series
+  {
+    id: 11,
+    title: "Breaking Bad",
+    image: "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg",
+    description_breve: "Un profesor de química se convierte en narcotraficante.",
+    description_amplia: "Walter White, un profesor de química con problemas económicos, comienza a fabricar metanfetaminas para asegurar el futuro de su familia.",
+    alt: "Póster de Breaking Bad",
+    type: "serie",
+    genre: ["drama", "crimen"],
+    year: 2008,
+    director: "Vince Gilligan"
+  },
+  {
+    id: 12,
+    title: "Stranger Things",
+    image: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    description_breve: "Misterios sobrenaturales en un pequeño pueblo.",
+    description_amplia: "Cuando un niño desaparece, un pequeño pueblo descubre un misterio que involucra experimentos secretos, fuerzas sobrenaturales y una niña muy especial.",
+    alt: "Póster de Stranger Things",
+    type: "serie",
+    genre: ["ciencia ficción", "terror"],
+    year: 2016,
+    director: "Duffer Brothers"
+  },
+  {
+    id: 13,
+    title: "Game of Thrones",
+    image: "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
+    description_breve: "Luchas por el poder en los Siete Reinos.",
+    description_amplia: "Nobles familias luchan por el control del Trono de Hierro en un mundo donde el verano puede durar décadas y el invierno toda una vida.",
+    alt: "Póster de Game of Thrones",
+    type: "serie",
+    genre: ["fantasía", "drama"],
+    year: 2011,
+    director: "David Benioff, D.B. Weiss"
+  },
+  {
+    id: 14,
+    title: "The Mandalorian",
+    image: "https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg",
+    description_breve: "Un cazarrecompensas en los confines de la galaxia.",
+    description_amplia: "Las aventuras de un pistolero solitario en los confines de la galaxia, lejos de la autoridad de la Nueva República.",
+    alt: "Póster de The Mandalorian",
+    type: "serie",
+    genre: ["ciencia ficción", "aventura"],
+    year: 2019,
+    director: "Jon Favreau"
+  },
+  {
+    id: 15,
+    title: "The Crown",
+    image: "https://m.media-amazon.com/images/M/MV5BZTEyNjJmM2QtNzNkNC00N2E4LWJkMzctM2ExNjc4YzkyM2E1XkEyXkFqcGdeQXVyMTUyMTUzNjQ0._V1_.jpg",
+    description_breve: "Drama histórico sobre la reina Isabel II.",
+    description_amplia: "Esta serie dramática sigue la vida política y los rivales personales de la reina Isabel II desde la década de 1940 hasta los tiempos modernos.",
+    alt: "Póster de The Crown",
+    type: "serie",
+    genre: ["drama", "histórico"],
+    year: 2016,
+    director: "Peter Morgan"
+  },
+  {
+    id: 16,
+    title: "The Witcher",
+    image: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
+    description_breve: "Un cazador de monstruos en un mundo de fantasía.",
+    description_amplia: "Geralt de Rivia, un mutante cazador de monstruos, lucha por encontrar su lugar en un mundo donde las personas a menudo resultan más malvadas que las bestias.",
+    alt: "Póster de The Witcher",
+    type: "serie",
+    genre: ["fantasía", "aventura"],
+    year: 2019,
+    director: "Lauren Schmidt Hissrich"
+  },
+  {
+    id: 17,
+    title: "Black Mirror",
+    image: "https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    description_breve: "Distopías tecnológicas en formato antológico.",
+    description_amplia: "Una serie antológica que explora un futuro retorcido donde las grandes innovaciones tecnológicas chocan con los aspectos más oscuros de la naturaleza humana.",
+    alt: "Póster de Black Mirror",
+    type: "serie",
+    genre: ["ciencia ficción", "drama"],
+    year: 2011,
+    director: "Charlie Brooker"
+  },
+  {
+    id: 18,
+    title: "The Boys",
+    image: "https://m.media-amazon.com/images/M/MV5BOTEyNDJhMDAtY2U5ZS00OTMzLTkwODktMjU3MjFkZWVlMGYyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    description_breve: "Superhéroes corruptos enfrentados a vigilantes.",
+    description_amplia: "Un grupo de vigilantes se enfrenta a superhéroes corruptos que abusan de sus poderes en lugar de usarlos para el bien.",
+    alt: "Póster de The Boys",
+    type: "serie",
+    genre: ["acción", "comedia negra"],
+    year: 2019,
+    director: "Eric Kripke"
+  },
+  {
+    id: 19,
+    title: "Dark",
+    image: "https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg",
+    description_breve: "Misterios temporales en un pequeño pueblo alemán.",
+    description_amplia: "La desaparición de dos niños expone las relaciones fracturadas y las vidas secretas de cuatro familias en un pequeño pueblo alemán.",
+    alt: "Póster de Dark",
+    type: "serie",
+    genre: ["ciencia ficción", "thriller"],
+    year: 2017,
+    director: "Baran bo Odar, Jantje Friese"
+  },
+  {
+    id: 20,
+    title: "The Office (US)",
+    image: "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg",
+    description_breve: "Comedia sobre la vida en una oficina mediocre.",
+    description_amplia: "Un falso documental sobre los empleados de una sucursal de Dunder Mifflin Paper Company en Scranton, Pensilvania.",
+    alt: "Póster de The Office",
+    type: "serie",
+    genre: ["comedia"],
+    year: 2005,
+    director: "Greg Daniels"
+  }
+];
