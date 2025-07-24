@@ -6,21 +6,25 @@ import Inicio from './components/pages/Inicio';
 import Contacto from './components/pages/Contacto';
 import Login from './components/pages/Login';
 import DetallePelicula from './components/pages/DetallePelicula';
+import Error404 from "./components/pages/Error404";
 import Administrador from './components/pages/Administrador';
 import AcercaDeNosotros from './components/pages/AcercaDeNosotros';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import Error404 from "./components/pages/Error404";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import { useState } from 'react';
 
 function App() {
+
+const userLogueado = sessionStorage.getItem("userKey") || false
+const [adminUser, setAdminUser] = useState(userLogueado)
+
   return (
     <>
       <BrowserRouter>
-      <Menu></Menu>
+      <Menu adminUser={adminUser} setAdminUser={setAdminUser}></Menu>
       <main>
         <Routes>
           <Route path="/" element={<Inicio></Inicio>}></Route>
-          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/login" element={<Login setAdminUser={setAdminUser}></Login>}></Route>
           <Route path="/detalle" element={<DetallePelicula></DetallePelicula>}></Route>
           <Route path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route path="/acercadenosotros" element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>

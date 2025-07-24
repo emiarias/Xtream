@@ -4,32 +4,62 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { NavLink, Link, useNavigate } from "react-router";
+import Swal from "sweetalert2";
 import { Button, FormControl, FormGroup, FormLabel } from "react-bootstrap";
-import { NavLink } from "react-router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
-
 import Modal from "react-bootstrap/Modal";
 
-const Menu = () => {
+const Menu = ({ adminUser, setAdminUser }) => {
+
   const {
     register,
     reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const navegacion = useNavigate();
+
+  const logOut = () => {
+    Swal.fire({
+      title: "Tu sesión se está por cerrar",
+      text: "Estás seguro de esto?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Cerrar sesión",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Sesión cerrada",
+          text: "Nos vemos la próxima.",
+        });
+        setAdminUser(false);
+        sessionStorage.removeItem("userKey");
+        navegacion("/");
+      }
+    });
+  };
 
   return (
     <>
       <header>
         <Navbar expand="lg" className="colorNav">
           <Container>
-            <Navbar.Brand className="fuenteLogo color-logo-nav">
+            <Navbar.Brand
+              as={Link}
+              to={"/"}
+              className="fuenteLogo color-logo-nav"
+            >
               Xtream
             </Navbar.Brand>
             <Form className="w-50 d-flex justify-content-center">
@@ -52,21 +82,26 @@ const Menu = () => {
                 <NavLink to={"/"} className="tinos nav-link">
                   Inicio
                 </NavLink>
-                <NavLink to={"/login"} className="tinos nav-link">
-                  Login
-                </NavLink>
-                <NavLink to={"/administrador"} className="tinos nav-link">
-                  Administrador
-                </NavLink>
-                <Button
-                  className="tinos nav-link boton-crea-cuenta"
-                  onClick={handleShow}
-                >
-                  Crea tu cuenta
-                </Button>
-                <Button className="tinos nav-link boton-logout w-25">
-                  Logout
-                </Button>
+                {adminUser ? (
+                  <>
+                    <NavLink to={"/administrador"} className="tinos nav-link">
+                      Administrador
+                    </NavLink>
+                    <Button
+                      className="tinos nav-link boton-logout w-25"
+                      onClick={logOut}
+                    >
+                      Logout
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <NavLink to={"/login"} className="tinos nav-link">
+                      Login
+                    </NavLink>
+                    <Button className="tinos nav-link" onClick={handleShow}>Crea tu cuenta</Button>
+                  </>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -75,19 +110,20 @@ const Menu = () => {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title className="text-center w-100">
-            ¿Quieres ver Xtream ya?<br /> ¡Crea tu cuenta en 3 pasos!
+            ¿Quieres ver Xtream ya?
+            <br /> ¡Crea tu cuenta en 3 pasos!
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form
-            onSubmit={handleSubmit((e) => {
-              e.preventDefault;
+            onSubmit={handleSubmit(() => {
               Swal.fire({
                 title: "Cuenta Creada!",
                 text: "Tu cuenta ha sido creada exitosamente!",
                 icon: "success",
               });
               reset();
+              handleClose()
             })}
           >
             <FormGroup className="mb-3" controlId="formBasicNombreUsuario">
@@ -99,7 +135,7 @@ const Menu = () => {
                 min={5}
                 {...register("text", {
                   required: "El nombre de usuario es un dato obligatorio",
-                  pattern: {  
+                  pattern: {
                     message:
                       "El nombre debe tener entre 8 y 16 caracteres, al menos un dígito",
                   },
@@ -162,8 +198,11 @@ const Menu = () => {
               </Form.Text>
             </Form.Group>
             <FormGroup className="d-flex justify-content-end">
-              <Button variant="success" type="submit">
-                Crear Cuenta
+              <Button
+                className="tinos boton-crea-cuenta" variant="success"
+                onClick={handleShow} type="submit"
+              >
+                Crea tu cuenta
               </Button>
             </FormGroup>
           </Form>

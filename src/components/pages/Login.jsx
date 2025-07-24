@@ -1,19 +1,33 @@
 import { Col, Form, Row, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
 
-const Login = () => {
+const Login = ({setAdminUser}) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const navegacion = useNavigate()
+
+  const iniciarSesion = (usuario) => {
+    if(
+      usuario.email === import.meta.env.VITE_API_EMAIL &&
+      usuario.password === import.meta.env.VITE_API_PASSWORD
+    ){
+      setAdminUser(true)
+      sessionStorage.setItem("userKey", true)
+      navegacion("/administrador")
+    }
+  }
+
   return (
     <section className="container">
       <Row xs={1} md={2} className="align-items-center">
         <Col className="mb-3">
         <h1 className="my-5 text-center text-md-start tinos">Inicia sesión</h1>
-          <Form className="raleway" onSubmit={handleSubmit((e)=>e.preventDefault)}>
+          <Form className="raleway" onSubmit={handleSubmit(iniciarSesion)}>
             <Form.Group>
               <Form.Label>Correo electrónico</Form.Label>
               <Form.Control
