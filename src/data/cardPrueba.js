@@ -97,34 +97,10 @@ const cardsData = [
     year: 1994,
     director: "Quentin Tarantino"
   },
-  {
-    id: 9,
-    title: "El Laberinto del Fauno",
-    image: "https://m.media-amazon.com/images/I/81xX7QMz3UL._AC_UF1000,1000_QL80_.jpg",
-    description_breve: "Fantasía oscura ambientada en la posguerra española.",
-    description_amplia: "En la España de 1944, una niña se refugia en un misterioso laberinto para escapar de su cruel padrastro, un capitán del ejército.",
-    alt: "Póster de El Laberinto del Fauno",
-    type: "pelicula",
-    genre: ["fantasía", "drama"],
-    year: 2006,
-    director: "Guillermo del Toro"
-  },
-  {
-    id: 10,
-    title: "Inception",
-    image: "https://m.media-amazon.com/images/I/71M0WFPNebL._AC_UF1000,1000_QL80_.jpg",
-    description_breve: "Ciencia ficción sobre el mundo de los sueños.",
-    description_amplia: "Un ladrón que roba secretos corporativos mediante el uso de tecnología para compartir sueños recibe la tarea inversa de implantar una idea en la mente de un objetivo.",
-    alt: "Póster de Inception",
-    type: "pelicula",
-    genre: ["ciencia ficción", "acción"],
-    year: 2010,
-    director: "Christopher Nolan"
-  },
-
+  
   // Series
   {
-    id: 11,
+    id: 9,
     title: "Breaking Bad",
     image: "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg",
     description_breve: "Un profesor de química se convierte en narcotraficante.",
@@ -136,7 +112,7 @@ const cardsData = [
     director: "Vince Gilligan"
   },
   {
-    id: 12,
+    id: 10,
     title: "Stranger Things",
     image: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
     description_breve: "Misterios sobrenaturales en un pequeño pueblo.",
@@ -148,7 +124,7 @@ const cardsData = [
     director: "Duffer Brothers"
   },
   {
-    id: 13,
+    id: 11,
     title: "Game of Thrones",
     image: "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
     description_breve: "Luchas por el poder en los Siete Reinos.",
@@ -160,7 +136,7 @@ const cardsData = [
     director: "David Benioff, D.B. Weiss"
   },
   {
-    id: 14,
+    id: 12,
     title: "The Mandalorian",
     image: "https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg",
     description_breve: "Un cazarrecompensas en los confines de la galaxia.",
@@ -172,7 +148,7 @@ const cardsData = [
     director: "Jon Favreau"
   },
   {
-    id: 15,
+    id: 13,
     title: "The Crown",
     image: "https://m.media-amazon.com/images/M/MV5BZTEyNjJmM2QtNzNkNC00N2E4LWJkMzctM2ExNjc4YzkyM2E1XkEyXkFqcGdeQXVyMTUyMTUzNjQ0._V1_.jpg",
     description_breve: "Drama histórico sobre la reina Isabel II.",
@@ -184,7 +160,7 @@ const cardsData = [
     director: "Peter Morgan"
   },
   {
-    id: 16,
+    id: 14,
     title: "The Witcher",
     image: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
     description_breve: "Un cazador de monstruos en un mundo de fantasía.",
@@ -196,7 +172,7 @@ const cardsData = [
     director: "Lauren Schmidt Hissrich"
   },
   {
-    id: 17,
+    id: 15,
     title: "Black Mirror",
     image: "https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
     description_breve: "Distopías tecnológicas en formato antológico.",
@@ -207,40 +183,4 @@ const cardsData = [
     year: 2011,
     director: "Charlie Brooker"
   },
-  {
-    id: 18,
-    title: "The Boys",
-    image: "https://m.media-amazon.com/images/M/MV5BOTEyNDJhMDAtY2U5ZS00OTMzLTkwODktMjU3MjFkZWVlMGYyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
-    description_breve: "Superhéroes corruptos enfrentados a vigilantes.",
-    description_amplia: "Un grupo de vigilantes se enfrenta a superhéroes corruptos que abusan de sus poderes en lugar de usarlos para el bien.",
-    alt: "Póster de The Boys",
-    type: "serie",
-    genre: ["acción", "comedia negra"],
-    year: 2019,
-    director: "Eric Kripke"
-  },
-  {
-    id: 19,
-    title: "Dark",
-    image: "https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg",
-    description_breve: "Misterios temporales en un pequeño pueblo alemán.",
-    description_amplia: "La desaparición de dos niños expone las relaciones fracturadas y las vidas secretas de cuatro familias en un pequeño pueblo alemán.",
-    alt: "Póster de Dark",
-    type: "serie",
-    genre: ["ciencia ficción", "thriller"],
-    year: 2017,
-    director: "Baran bo Odar, Jantje Friese"
-  },
-  {
-    id: 20,
-    title: "The Office (US)",
-    image: "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg",
-    description_breve: "Comedia sobre la vida en una oficina mediocre.",
-    description_amplia: "Un falso documental sobre los empleados de una sucursal de Dunder Mifflin Paper Company en Scranton, Pensilvania.",
-    alt: "Póster de The Office",
-    type: "serie",
-    genre: ["comedia"],
-    year: 2005,
-    director: "Greg Daniels"
-  }
 ];
