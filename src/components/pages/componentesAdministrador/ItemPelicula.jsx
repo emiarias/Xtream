@@ -1,4 +1,5 @@
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 const ItemPelicula = () => {
     return (
@@ -12,9 +13,9 @@ const ItemPelicula = () => {
       <td>Ciencia ficción</td>
       <td className="text-center">
         <div className="d-flex gap-1 justify-content-center">
-        <Button variant="warning" className="me-lg-2">
+        <Link to={"/administrador/editar"} className="btn btn-warning me-lg-2">
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         <Button variant="danger">
           <i className="bi bi-trash"></i>
         </Button>

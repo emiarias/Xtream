@@ -1,16 +1,17 @@
 import { Button, Table } from 'react-bootstrap';
 import ItemPelicula from './componentesAdministrador/ItemPelicula';
+import { Link } from 'react-router';
 
 const Administrador = () => {
     return (
         <section className='container'>
-           <div className="d-flex justify-content-between align-items-center mt-5">
+           <div className="row justify-content-between align-items-center mt-5">
         <h1 className="display-4 tinos">Catálogo de películas/series</h1>
-        <div>
-          <Button className="btn btn-success">
+        <div className='d-flex gap-2 my-2'>
+          <Link to={"/administrador/crear"} className="btn btn-success">
             Agregar película/serie
             <i className="bi bi-file-earmark-plus ms-2"></i>
-          </Button>
+          </Link>
           <Button className="btn btn-info ms-2">
             <i
               className="bi bi-database-fill-add"

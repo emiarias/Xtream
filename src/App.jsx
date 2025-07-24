@@ -46,11 +46,11 @@ function App() {
 
               <Route
                 path="crear"
-                element={<FormularioPelicula></FormularioPelicula>}
+                element={<FormularioPelicula titulo={'Añadir película/serie'}></FormularioPelicula>}
               ></Route>
               <Route
                 path="editar"
-                element={<FormularioPelicula></FormularioPelicula>}
+                element={<FormularioPelicula titulo={'Editar película/serie'}></FormularioPelicula>}
               ></Route>
             </Route>
             <Route path="/*" element={<Error404></Error404>}></Route>

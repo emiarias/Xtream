@@ -1,8 +1,8 @@
-const FormularioPelicula = () => {
+const FormularioPelicula = ({titulo}) => {
     return (
-        <div>
-            <h1>Hola Mundo</h1>
-        </div>
+        <section className="container my-3">
+            <h1>{titulo}</h1>
+        </section>
     );
 };
 
