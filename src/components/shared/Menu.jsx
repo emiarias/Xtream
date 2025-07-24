@@ -99,7 +99,7 @@ const Menu = ({ adminUser, setAdminUser }) => {
                     <NavLink to={"/login"} className="tinos nav-link">
                       Login
                     </NavLink>
-                    <Button className="tinos nav-link" onClick={handleShow}>Crea tu cuenta</Button>
+                    <Button className="tinos nav-link boton-crea-cuenta" onClick={handleShow}>Crea tu cuenta</Button>
                   </>
                 )}
               </Nav>
@@ -199,7 +199,7 @@ const Menu = ({ adminUser, setAdminUser }) => {
             </Form.Group>
             <FormGroup className="d-flex justify-content-end">
               <Button
-                className="tinos boton-crea-cuenta" variant="success"
+                className="tinos" variant="success"
                 onClick={handleShow} type="submit"
               >
                 Crea tu cuenta
