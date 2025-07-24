@@ -200,8 +200,7 @@ const Menu = ({ adminUser, setAdminUser }) => {
             <FormGroup className="d-flex justify-content-end">
               <Button
                 className="tinos boton-crea-cuenta" variant="success"
-                onClick={handleShow}
-                type="submit"
+                onClick={handleShow} type="submit"
               >
                 Crea tu cuenta
               </Button>
