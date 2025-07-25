@@ -4,7 +4,10 @@ import { Link } from "react-router";
 const DetallePelicula = () => {
   return (
     <Container className="my-3">
-      <Card border="success">
+      <Link className="text-decoration-none text-success-emphasis" to={"/"}>
+        <i className="bi bi-arrow-left mx-2"></i>Volver
+      </Link>
+      <Card className="my-3" border="success">
         <Row >
           <Col md={12}>
             <Card.Img
