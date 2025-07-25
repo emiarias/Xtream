@@ -179,6 +179,24 @@ const FormularioPelicula = ({ titulo }) => {
             {errors.descripcionAmplia?.message}
           </Form.Text>
         </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Trailer*</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ej: https://www.youtube.com/watch?v=OM0tSTEQCQA"
+            {...register("trailer", {
+              required: "La url del trailer es un dato obligatorio",
+              pattern: {
+                value: /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/,
+                message:
+                  "El trailer debe ser una url de un video de YouTube valido",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.trailer?.message}
+          </Form.Text>
+        </Form.Group>
         <Form.Group className="mb-4 d-flex gap-3">
           <Button variant="success" type="submit">
             Guardar
