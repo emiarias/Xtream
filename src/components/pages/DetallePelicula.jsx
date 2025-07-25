@@ -15,13 +15,15 @@ const DetallePelicula = () => {
           </Col>
           <Col md={12}>
             <Card.Body>
+              <div className="d-flex justify-content-evenly align-items-center">
+                <Card.Title className="text-start Raleway display-5">Formula 1</Card.Title>
               <Link
-                className="btn btn-success mb-2"
+                className="btn btn-success"
                 to={"https://youtu.be/SaxjZrRONog"}
               >
                 Ver Pelicula
               </Link>
-              <Card.Title className="text-center Raleway">Formula 1</Card.Title>
+              </div>
               <hr />
               <div className="d-flex justify-content-evenly border border-warning align-items-center my-3 py-2">
                 <Card.Text className="text-center mb-0">
@@ -35,7 +37,6 @@ const DetallePelicula = () => {
                 </Card.Text>
               </div>
               <Card.Text className="tinos">
-                <strong>Descripcion: </strong>
                 Fórmula 1 lanzó un nuevo avance de la próxima película de la
                 Máxima. Y se aprovechó un momento especial para hacerlo, ya que
                 el clip fue emitido durante el programa previo al Super Bowl,
@@ -48,9 +49,9 @@ const DetallePelicula = () => {
                 interpretado por Damson Idris, en la escudería ficticia APXGP.
               </Card.Text>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer className="text-center">
               <small className="text-muted">
-                Última actualización hace 3 minutos
+                &copy;Todos los derechos reservados 2025
               </small>
             </Card.Footer>
           </Col>
