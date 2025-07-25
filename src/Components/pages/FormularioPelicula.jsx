@@ -1,5 +1,6 @@
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router";
 
 const FormularioPelicula = ({ titulo }) => {
   const {
@@ -178,10 +179,11 @@ const FormularioPelicula = ({ titulo }) => {
             {errors.descripcionAmplia?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-4">
+        <Form.Group className="mb-4 d-flex gap-3">
           <Button variant="success" type="submit">
             Guardar
           </Button>
+          <Link className="btn btn-danger" to={'/administrador'}>Cancelar</Link>
         </Form.Group>
       </Form>
     </section>
