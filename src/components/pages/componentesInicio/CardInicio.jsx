@@ -20,7 +20,7 @@ const CardInicio = () => {
                             <Card.Text>Un hacker descubre que su realidad es una simulación creada por máquinas inteligentes y se une a la rebelión para liberar a la humanidad.</Card.Text>
                             
                             {/* cambiar el boton por un link*/}
-                            <Button variant="success">Ver más</Button>
+                            <Button variant="success" className='text-center'>Ver más</Button>
                          </Card.Body>
                     </Card>
                 </Col>
