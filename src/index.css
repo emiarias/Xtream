@@ -7,7 +7,8 @@
 }
 
 main {
-  flex-grow: 1;}
+  flex-grow: 1;
+}
 
 .tinos {
   font-family: "Tinos", serif;
@@ -60,18 +61,26 @@ main {
   }
 }
 
-  /* Cambia el color de las flechas del carrusel a blanco */
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: invert(1) brightness(2) !important;
-  }
+/* Cambia el color de las flechas del carrusel a blanco */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) brightness(2) !important;
+}
 
-  /* Cambia el color de los indicadores (rallitas) del carrusel */
-  .carousel-indicators [data-bs-target] {
-    background-color: #fff !important;
-    opacity: 1 !important;
-  }
-  .carousel-indicators .active {
-    background-color: #4ade80 !important;
-  }
-/* index.css */
+/* Cambia el color de los indicadores (rallitas) del carrusel */
+.carousel-indicators [data-bs-target] {
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+.carousel-indicators .active {
+  background-color: #4ade80 !important;
+}
+
+.imagen-detalle-pelicula {
+  filter: grayscale(60%);
+  transition: 400ms;
+}
+
+.imagen-detalle-pelicula:hover {
+  filter: grayscale(0%);
+}
