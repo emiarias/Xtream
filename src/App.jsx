@@ -8,9 +8,9 @@ import Login from './components/pages/Login';
 import DetallePelicula from './components/pages/DetallePelicula';
 import Error404 from "./components/pages/Error404";
 import Administrador from './components/pages/Administrador';
-import AcercaDeNosotros from './components/pages/AcercaDeNosotros';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { useState } from 'react';
+import AcercaDeNosotros from './Components/pages/AcercaDeNosotros';
 
 function App() {
 
