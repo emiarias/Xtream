@@ -13,10 +13,19 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { useState } from "react";
 import ProtectorAdmin from "./components/ProtectorAdmin";
 import FormularioPelicula from "./components/pages/FormularioPelicula";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const userLogueado = sessionStorage.getItem("userKey") || false;
   const [adminUser, setAdminUser] = useState(userLogueado);
+  const [peliculas, setPeliculas] = useState([])
+
+  const crearPeliculas = (peliculaNueva) => {
+    peliculaNueva.id = uuidv4()
+
+    setPeliculas([...peliculas,peliculaNueva])
+    return true
+  }
 
   return (
     <>
@@ -46,7 +55,7 @@ function App() {
 
               <Route
                 path="crear"
-                element={<FormularioPelicula titulo={'Añadir película/serie'}></FormularioPelicula>}
+                element={<FormularioPelicula titulo={'Añadir película/serie'} crearPeliculas={crearPeliculas}></FormularioPelicula>}
               ></Route>
               <Route
                 path="editar"
