@@ -132,11 +132,12 @@ main {
 
 /* Imagen del miembro del equipo */
 .team-member img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  display: block;
 }
 
 /* Nombre del miembro */
@@ -144,6 +145,7 @@ main {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 /* Rol ficticio o puesto */
@@ -151,23 +153,28 @@ main {
   font-style: italic;
   color: #555;
   font-size: 0.95rem;
+  text-align: center;
 }
-/* === Estilos adicionales para las cards del equipo (usando React Bootstrap) === */
 
-/* Imagen del miembro dentro del componente Card */
+/* Eliminamos o sobreescribimos los estilos anteriores que daban borde cuadrado */
 .team-img {
-  height: 220px;
-  object-fit: cover; /* Asegura que la imagen no se deforme */
-  border-radius: 8px;
+  border-radius: 50% !important;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  display: block;
 }
 
 /* Card individual del equipo (sin bordes y con efecto hover) */
 .team-card {
   border: none;
   transition: transform 0.3s ease;
+  background-color: transparent;
 }
 
 /* Efecto zoom suave al pasar el mouse por encima */
 .team-card:hover {
   transform: scale(1.03);
 }
+

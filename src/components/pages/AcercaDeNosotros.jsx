@@ -1,26 +1,29 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-
+import juanImg from '../../assets/imagen_equipo/juan-blanco.jpeg';
+import miltonImg from '../../assets/imagen_equipo/Milton-Mamani.jpeg';
+import lucasImg from '../../assets/imagen_equipo/Lucas-figueroa.jpeg';
+import alejandroImg from '../../assets/imagen_equipo/alejandro-insinga.jpeg';
 const miembros = [
   {
     nombre: "Juan Manuel Blanco",
     rol: "CEO & Fundador",
-    imagen: "/images/julian.jpg",
+    imagen: juanImg,
   },
   {
     nombre: "Alejandro Insinga",
     rol: "Diseñador UX/UI",
-    imagen: "/images/camila.jpg",
+    imagen: alejandroImg,
   },
   {
     nombre: "Milton Ramon Mamani",
     rol: "Desarrollador Full Stack",
-    imagen: "/images/tomas.jpg",
+    imagen: miltonImg,
   },
   {
     nombre: "Lucas Ivan Figueroa Alcorta",
     rol: "Especialista en Marketing",
-    imagen: "/images/valentina.jpg",
+    imagen: lucasImg,
   },
 ];
 
@@ -54,7 +57,7 @@ function AcercaDeNosotros() {
         <Row xs={1} sm={2} md={4} className="g-4">
           {miembros.map((miembro, idx) => (
             <Col key={idx}>
-              <Card className="h-100 text-center shadow team-card">
+              <Card className="h-100 text-center shadow team-card border-0">
                 <Card.Img
                   variant="top"
                   src={miembro.imagen}
