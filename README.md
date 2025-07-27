@@ -1,12 +1,46 @@
-# React + Vite
+# 🎬 Xtream
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto final del Módulo 2 del curso Full Stack Developer. Xtream es una plataforma web inspirada en servicios de streaming, diseñada con React y React Bootstrap para ofrecer una interfaz moderna y responsive.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- React Bootstrap
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Vite
 
-## Expanding the ESLint configuration
+## 🧑‍💻 Integrantes del equipo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Juan Manuel Blanco** – Desarrollo del navbar, carrusel de imágenes y sección "Nosotros".
+- **Milton Ramón Mamani** – Colaboración en componentes, estructura general y testeo.
+- **Lucas Iván Figueroa Alcorta** – Diseño y desarrollo de partes visuales y de navegación.
+- **Alejandro Insinga** – Footer, página de error 404, logo, imagen de error y sección "Acerca de Nosotros".
+
+## 🗂️ Estructura del proyecto
+
+src/
+├── assets/
+│ └── imagen_equipo/ # Fotos del equipo
+├── components/
+│ └── pages/
+│ └── AcercaDeNosotros.jsx
+├── App.jsx
+├── index.css
+└── main.jsx
+
+## 💡 Funcionalidades destacadas
+
+- Diseño responsive
+- Página de error personalizada (404)
+- Cards animadas en sección "Acerca de Nosotros"
+- Navegación fluida con React Router
+
+## 🛠️ Cómo clonar y ejecutar el proyecto
+
+```bash
+git clone https://github.com/tu-usuario/xtream.git
+cd xtream
+npm install
+npm run dev
