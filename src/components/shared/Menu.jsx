@@ -7,11 +7,14 @@ import Col from "react-bootstrap/Col";
 import { NavLink, Link, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { Button, FormControl, FormGroup, FormLabel } from "react-bootstrap";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
 
 const Menu = ({ adminUser, setAdminUser }) => {
+  const [hasScrolledToBottom, setHasScrolledToBottom] = useState(false);
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const termsRef = useRef(null);
 
   const {
     register,
@@ -19,6 +22,17 @@ const Menu = ({ adminUser, setAdminUser }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const handleScroll = () => {
+    const el = termsRef.current;
+    if (el.scrollTop + el.clientHeight >= el.scrollHeight) {
+      setHasScrolledToBottom(true);
+    }
+  };
+
+  const handleCheckboxChange = (e) => {
+    setAcceptedTerms(e.target.checked);
+  };
 
   const [show, setShow] = useState(false);
 
@@ -99,7 +113,12 @@ const Menu = ({ adminUser, setAdminUser }) => {
                     <NavLink to={"/login"} className="tinos nav-link">
                       Login
                     </NavLink>
-                    <Button className="tinos nav-link boton-crea-cuenta" onClick={handleShow}>Crea tu cuenta</Button>
+                    <Button
+                      className="tinos nav-link boton-crea-cuenta"
+                      onClick={handleShow}
+                    >
+                      Crea tu cuenta
+                    </Button>
                   </>
                 )}
               </Nav>
@@ -109,7 +128,7 @@ const Menu = ({ adminUser, setAdminUser }) => {
       </header>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="text-center w-100">
+          <Modal.Title className="text-center w-100 tinos">
             ¿Quieres ver Xtream ya?
             <br /> ¡Crea tu cuenta en 3 pasos!
           </Modal.Title>
@@ -123,7 +142,7 @@ const Menu = ({ adminUser, setAdminUser }) => {
                 icon: "success",
               });
               reset();
-              handleClose()
+              handleClose();
             })}
           >
             <FormGroup className="mb-3" controlId="formBasicNombreUsuario">
@@ -197,10 +216,40 @@ const Menu = ({ adminUser, setAdminUser }) => {
                 {errors.password?.message}
               </Form.Text>
             </Form.Group>
+            <hr />
+            <FormGroup>
+              <div
+                ref={termsRef}
+                onScroll={handleScroll}
+                className="terminos-condiciones"
+              >
+                <p className="Raleway">
+                  <strong>📜 Términos y Condiciones de Uso – Xtream </strong>
+                  <br />
+                  Bienvenido a Xtream, una aplicación que permite a los usuarios
+                  explorar, ver y gestionar contenido audiovisual. Al acceder o
+                  utilizar Xtream, usted acepta cumplir con los siguientes
+                  términos y condiciones. Si no está de acuerdo con ellos, por
+                  favor no utilice la aplicación.
+                </p>
+                
+              </div>
+
+              <Form.Check
+                type="checkbox"
+                label="He leído y acepto los Términos y Condiciones"
+                disabled={!hasScrolledToBottom}
+                checked={acceptedTerms}
+                onChange={handleCheckboxChange}
+              />
+            </FormGroup>
             <FormGroup className="d-flex justify-content-end">
               <Button
-                className="tinos" variant="success"
-                onClick={handleShow} type="submit"
+                className="tinos"
+                variant="success"
+                onClick={handleShow}
+                type="submit"
+                disabled={!acceptedTerms}
               >
                 Crea tu cuenta
               </Button>

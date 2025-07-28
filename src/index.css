@@ -84,3 +84,11 @@ main {
 .imagen-detalle-pelicula:hover {
   filter: grayscale(0%);
 }
+
+.terminos-condiciones {
+  max-height: 200px;
+  overflow-y: scroll;
+  border: 1px dotted #00e701;
+  padding: 10px;
+  margin-bottom: 10px;
+}
