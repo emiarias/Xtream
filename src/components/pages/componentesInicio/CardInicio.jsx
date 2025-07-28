@@ -3,11 +3,9 @@ import Card from 'react-bootstrap/Card';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
-const CardInicio = () => {
+const CardInicio = ({ pelicula }) => {
 
     return (<>
-        <Container className="my-5">
-            <Row>
                <Col
                         xs={12}       
                         sm={6}        
@@ -19,19 +17,17 @@ const CardInicio = () => {
                         <Card>
                             <Card.Img
                                 variant="top"
-                                src="https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.progressive.jpg?v=1573587596"
+                                src={pelicula.imagen}
                                 alt="Póster de Matrix"
                                 className='img-fluid'
                             />
                             <Card.Body>
-                                <Card.Title>Matrix</Card.Title>
-                                <Card.Text>Película de acción y fantasía sobre la realidad simulada.</Card.Text>
+                                <Card.Title>{pelicula.titulo}</Card.Title>
+                                <Card.Text>{pelicula.descripcionBreve}</Card.Text>
                                 <Button variant="primary">Ver más</Button>
                             </Card.Body>
                         </Card>
                     </Col>
-            </Row>
-        </Container>
     </>
     );
 };
