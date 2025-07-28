@@ -31,7 +31,7 @@ function AcercaDeNosotros() {
   return (
     <Container className="py-5">
       <h1 className="text-center mb-4">Acerca de Nosotros</h1>
-
+      
       <section className="mb-5">
         <h3 className="text-center">Nuestra Visión</h3>
         <p>
@@ -41,7 +41,7 @@ function AcercaDeNosotros() {
           series desde cualquier lugar.
         </p>
       </section>
-
+      <hr/>
       <section className="mb-5">
         <h3 className="text-center">Nuestro Objetivo</h3>
         <p>
@@ -51,7 +51,7 @@ function AcercaDeNosotros() {
           semana.
         </p>
       </section>
-
+      <hr/>
       <section>
         <h3 className="mb-4 text-center">Nuestro Equipo</h3>
         <Row xs={1} sm={2} md={4} className="g-4">
