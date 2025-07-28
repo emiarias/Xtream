@@ -18,7 +18,7 @@ const CardInicio = () => {
                             <Card.Text>Película de acción y fantasía sobre la realidad simulada.</Card.Text>
                         </Card.Body>
                         <Card.Footer className='text-center'>
-                            <Link className='btn btn-success' path='/Detalles'>Ver más</Link>
+                            <Link className='btn btn-success' to='/detalle'>Ver más</Link>
                         </Card.Footer>
                     </Card>
                 </Col>

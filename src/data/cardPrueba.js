@@ -8,7 +8,7 @@ const cardsData = [
   description_amplia: "Los Avengers y sus aliados deben detener al poderoso Thanos, que busca reunir las Gemas del Infinito para imponer su voluntad y destruir la mitad del universo.",
   alt: "Póster oficial de Avengers: Infinity War",
   type: "pelicula",
-  genre: ["Acción", "Aventura", "Ciencia ficción"],
+  genre: "Acción",
   year: 2018,
   director: "Anthony y Joe Russo",
   trailer: "https://www.youtube.com/watch?v=6ZfuNTqbHE8"
@@ -21,7 +21,7 @@ const cardsData = [
   description_amplia: "Tras la devastación causada por Thanos, los Avengers restantes elaboran un plan para deshacer sus actos y restaurar el orden en el universo, enfrentándose a grandes sacrificios.",
   alt: "Póster oficial de Avengers: Endgame",
   type: "pelicula",
-  genre: ["Acción", "Aventura", "Ciencia ficción"],
+  genre: "Acción",
   year: 2019,
   director: "Anthony y Joe Russo",
   trailer: "https://www.youtube.com/watch?v=TcMBFSGVi1c"
@@ -34,7 +34,7 @@ const cardsData = [
     description_amplia: "Un hacker descubre que su realidad es una simulación creada por máquinas inteligentes y se une a la rebelión para liberar a la humanidad.",
     alt: "Póster de Matrix",
     type: "pelicula",
-    genre: ["Ciencia ficción"],
+    genre: "Ciencia ficción",
     year: 1999,
     director: "Lana y Lilly Wachowski",
     trailer: "https://www.youtube.com/watch?v=vKQi3bBA1y8"
@@ -47,7 +47,7 @@ const cardsData = [
     description_amplia: "La saga de la familia Corleone, liderada por Don Vito, explora temas de poder, lealtad y traición.",
     alt: "Póster de El Padrino",
     type: "pelicula",
-    genre: ["Drama"],
+    genre: "Drama",
     year: 1972,
     director: "Francis Ford Coppola",
     trailer: "https://www.youtube.com/watch?v=sY1S34973zA"
@@ -60,7 +60,7 @@ const cardsData = [
     description_amplia: "Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
     alt: "Póster de Interestelar",
     type: "pelicula",
-    genre: ["Ciencia ficción"],
+    genre: "Ciencia ficción",
     year: 2014,
     director: "Christopher Nolan",
     trailer: "https://www.youtube.com/watch?v=UoSSbmD9vqc"
@@ -73,7 +73,7 @@ const cardsData = [
     description_amplia: "Una familia pobre se infiltra en la vida de una familia adinerada, desencadenando eventos inesperados.",
     alt: "Póster de Parásitos",
     type: "pelicula",
-    genre: ["Thriller"],
+    genre: "Thriller",
     year: 2019,
     director: "Bong Joon-ho",
     trailer: "https://www.youtube.com/watch?v=isOGD_7hNIY"
@@ -86,7 +86,7 @@ const cardsData = [
     description_amplia: "Varias historias de gánsters, boxeadores y un misterioso maletín se entrelazan en esta obra maestra.",
     alt: "Póster de Pulp Fiction",
     type: "pelicula",
-    genre: ["Crimen"],
+    genre: "Crimen",
     year: 1994,
     director: "Quentin Tarantino",
     trailer: "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
@@ -99,7 +99,7 @@ const cardsData = [
   description_amplia: "Un banquero injustamente condenado forja una amistad en prisión y encuentra la redención con el paso de los años.",
   alt: "Póster de The Shawshank Redemption",
   type: "pelicula",
-  genre: ["Drama"],
+  genre: "Drama",
   year: 1994,
   director: "Frank Darabont",
   trailer: "https://www.youtube.com/watch?v=6hB3S9bIaco"
@@ -113,7 +113,7 @@ const cardsData = [
   description_amplia: "Liderados por el astuto Tommy Shelby, los Peaky Blinders construyen un imperio criminal mientras enfrentan enemigos, la ley y sus propios demonios en la Inglaterra de los años 20.",
   alt: "Póster oficial de la serie Peaky Blinders",
   type: "serie",
-  genre: ["Crimen", "Drama histórico"],
+  genre: "Crimen",
   year: 2013,
   director: "Steven Knight",
   trailer: "https://www.youtube.com/watch?v=oVzVdvGIC7U"
@@ -126,7 +126,7 @@ const cardsData = [
   description_amplia: "Inspirada en las sagas del legendario Ragnar Lothbrok, cuenta cómo pasa de granjero a rey escandinavo liderando incursiones en Inglaterra y más allá, acompañado por su familia y guerreros. A lo largo de seis temporadas sigue también a sus hijos y su expansión por Europa.",
   alt: "Póster oficial de la serie Vikings",
   type: "serie",
-  genre: ["Drama histórico", "Acción", "Guerra"],
+  genre: "Drama histórico",
   year: 2013,
   director: "Michael Hirst",
   trailer: "https://www.youtube.com/watch?v=2HeycBS4edw"
@@ -139,7 +139,7 @@ const cardsData = [
   description_amplia: "Adaptación de la saga de novelas de George R. R. Martin, sigue la lucha por el Trono de Hierro entre familias nobles en un mundo donde el invierno se aproxima y fuerzas oscuras resurgirán. Es una historia épica de poder, sacrificio y traición.",
   alt: "Póster oficial de Game of Thrones temporada 8",
   type: "serie",
-  genre: ["Fantasía", "Drama", "Aventura"],
+  genre: "Fantasía",
   year: 2011,
   director: "David Benioff & D. B. Weiss (showrunners)",
   trailer: "https://www.youtube.com/watch?v=IznyEBoUcuk" 
@@ -152,7 +152,7 @@ const cardsData = [
   description_amplia: "456 personas con deudas aceptan participar en una serie de juegos infantiles con reglas mortales. Solo uno podrá ganar el premio final de ₩45.600 millones. Una crítica social sobre la desigualdad y la desesperación.",
   alt: "Póster oficial de la serie El juego del calamar",
   type: "serie",
-  genre: ["Thriller", "Drama", "Supervivencia"],
+  genre: "Drama",
   year: 2021,
   director: "Hwang Dong-hyuk",
   trailer: "https://www.youtube.com/watch?v=cTpISvwP9DM"
@@ -166,7 +166,7 @@ const cardsData = [
   description_amplia: "Nick Fury reúne a un equipo de superhéroes para enfrentar una amenaza global liderada por Loki, hermano adoptivo de Thor, en la primera gran aventura de los Avengers.",
   alt: "Póster oficial de The Avengers",
   type: "pelicula",
-  genre: ["Acción", "Aventura", "Ciencia ficción"],
+  genre: "Acción",
   year: 2012,
   director: "Joss Whedon",
   trailer: "https://www.youtube.com/watch?v=eOrNdBpGMv8"
@@ -179,7 +179,7 @@ const cardsData = [
   description_amplia: "Los Minions buscan a un nuevo villano para servir y terminan ayudando a la villana Scarlett Overkill en una aventura llena de humor y acción.",
   alt: "Póster oficial de Minions",
   type: "pelicula",
-  genre: ["Animación", "Comedia", "Aventura"],
+  genre: "Animación",
   year: 2015,
   director: "Pierre Coffin, Kyle Balda",
   trailer: "https://www.youtube.com/watch?v=LSw_te6wexM"
@@ -193,7 +193,7 @@ const cardsData = [
   description_amplia: "Los Croods son una familia cavernícola que debe adaptarse a un mundo cambiante mientras buscan un nuevo hogar, enfrentando peligros y descubriendo la importancia del cambio y la familia.",
   alt: "Póster oficial de Los Croods",
   type: "pelicula",
-  genre: ["Animación", "Comedia", "Aventura"],
+  genre: "Animación",
   year: 2013,
   director: "Kirk DeMicco, Chris Sanders",
   trailer: "https://www.youtube.com/watch?v=lNk1XIejGRA"
