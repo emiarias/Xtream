@@ -1,8 +1,9 @@
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
+import Swal from "sweetalert2";
 
-const FormularioPelicula = ({ titulo }) => {
+const FormularioPelicula = ({ titulo, crearPeliculas }) => {
   const {
     register,
     handleSubmit,
@@ -11,10 +12,26 @@ const FormularioPelicula = ({ titulo }) => {
     setValue,
   } = useForm();
 
+  const onSubmit = (pelicula) => {
+    if (titulo === "Añadir película/serie") {
+      console.log(pelicula);
+      //crear el producto nuevo
+      if (crearPeliculas(pelicula)) {
+        Swal.fire({
+          title: "Pelicula creada",
+          text: `La pelicula ${pelicula.titulo} fue creado correctamente.`,
+          icon: "success",
+        });
+        //resetear el formulario
+        reset();
+      }
+    }
+  }
+
   return (
     <section className="container my-5">
       <h1 className="my-3">{titulo}</h1>
-      <Form onSubmit={handleSubmit((e) => e.preventDefault)}>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3">
           <Form.Label>Nombre*</Form.Label>
           <Form.Control

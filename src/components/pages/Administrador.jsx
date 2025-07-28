@@ -2,7 +2,7 @@ import { Button, Table } from 'react-bootstrap';
 import ItemPelicula from './componentesAdministrador/ItemPelicula';
 import { Link } from 'react-router';
 
-const Administrador = () => {
+const Administrador = ({ peliculas }) => {
     return (
         <section className='container'>
            <div className="row justify-content-between align-items-center mt-5">
@@ -32,7 +32,7 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-            <ItemPelicula></ItemPelicula>
+            {peliculas.map((pelicula, indice)=><ItemPelicula key={pelicula.id} fila={indice+1} pelicula={pelicula}></ItemPelicula>)}
         </tbody>
       </Table>
         </section>
