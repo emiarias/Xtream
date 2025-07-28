@@ -156,14 +156,14 @@ main {
   text-align: center;
 }
 
-/* Eliminamos o sobreescribimos los estilos anteriores que daban borde cuadrado */
+/* estilo imagen circular */
 .team-img {
+  width: 150px !important;
+  height: 150px !important;
   border-radius: 50% !important;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin: 0 auto 1rem auto;
+  object-fit: cover !important;
   display: block;
+  margin: 0 auto 1rem auto !important;
 }
 
 /* Card individual del equipo (sin bordes y con efecto hover) */

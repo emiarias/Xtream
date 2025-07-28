@@ -33,7 +33,7 @@ function AcercaDeNosotros() {
       <h1 className="text-center mb-4">Acerca de Nosotros</h1>
 
       <section className="mb-5">
-        <h3>Nuestra Visión</h3>
+        <h3 className="text-center">Nuestra Visión</h3>
         <p>
           En Xtream, creemos en una experiencia de entretenimiento sin límites.
           Nuestra visión es revolucionar la forma en que las personas disfrutan
@@ -43,7 +43,7 @@ function AcercaDeNosotros() {
       </section>
 
       <section className="mb-5">
-        <h3>Nuestro Objetivo</h3>
+        <h3 className="text-center">Nuestro Objetivo</h3>
         <p>
           Nuestro objetivo es ofrecer una plataforma intuitiva, moderna y
           accesible para que nuestros usuarios encuentren sus películas y series
@@ -53,7 +53,7 @@ function AcercaDeNosotros() {
       </section>
 
       <section>
-        <h3 className="mb-4">Nuestro Equipo</h3>
+        <h3 className="mb-4 text-center">Nuestro Equipo</h3>
         <Row xs={1} sm={2} md={4} className="g-4">
           {miembros.map((miembro, idx) => (
             <Col key={idx}>
