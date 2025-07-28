@@ -234,12 +234,14 @@ const Menu = ({ adminUser, setAdminUser }) => {
                 </p>
                 <ol>
                   <li>
-                    <strong>🧾Aceptacion de los Terminos: </strong>Al utilizar Xtream, usted reconoce haber leído, entendido
+                    <strong>🧾Aceptacion de los Terminos: </strong><br />
+                    Al utilizar Xtream, usted reconoce haber leído, entendido
                     y aceptado estos Términos y Condiciones, así como nuestra
                     Política de Privacidad.
                   </li>
                   <li className="my-1">
-                    <strong>🎬Uso de la Aplicacion: </strong>Xtream está destinada exclusivamente para uso personal y no
+                    <strong>🎬Uso de la Aplicacion: </strong><br />
+                    Xtream está destinada exclusivamente para uso personal y no
                     comercial. - El contenido disponible en Xtream es propiedad
                     de sus respectivos titulares de derechos. No se permite la
                     reproducción, distribución o modificación sin autorización.
@@ -247,45 +249,52 @@ const Menu = ({ adminUser, setAdminUser }) => {
                     ilegales, fraudulentas o que infrinjan derechos de terceros.
                   </li>
                   <li className="my-1">
-                    <strong>👤 Registro y Cuenta: </strong> - Para acceder a ciertas funciones,
+                    <strong>👤 Registro y Cuenta: </strong><br />
+                    Para acceder a ciertas funciones,
                     puede ser necesario crear una cuenta. - Usted es responsable
                     de mantener la confidencialidad de sus credenciales de
                     acceso. - Xtream se reserva el derecho de suspender o
                     eliminar cuentas que violen estos términos.
                   </li>
                   <li className="my-1">
-                    <strong>📶 Disponibilidad del Servicio: </strong> - Xtream no garantiza que el
+                    <strong>📶 Disponibilidad del Servicio: </strong><br /> 
+                    Xtream no garantiza que el
                     servicio esté disponible de forma ininterrumpida o libre de
                     errores. - Nos reservamos el derecho de modificar, suspender
                     o discontinuar la aplicación en cualquier momento sin previo
                     aviso.
                   </li>
                   <li className="my-1">
-                    <strong>📄 Contenido de Terceros: </strong>Xtream puede incluir enlaces o
+                    <strong>📄 Contenido de Terceros: </strong><br />
+                    Xtream puede incluir enlaces o
                     contenido de terceros. No nos responsabilizamos por la
                     exactitud o legalidad de dicho contenido. - El uso de
                     servicios de terceros está sujeto a sus propios términos y
                     condiciones.
                   </li>
                   <li className="my-1">
-                    <strong>🔐 Privacidad: </strong> - El uso de Xtream implica la recopilación y
+                    <strong>🔐 Privacidad: </strong><br />
+                    El uso de Xtream implica la recopilación y
                     tratamiento de ciertos datos personales. Para más
                     información, consulte nuestra <NavLink to={"/*"} onClick={handleClose}>Politica de Privacidad</NavLink>.
                   </li>
                   <li className="my-1">
-                    <strong>⚖️ Limitación de Responsabilidad: </strong> - Xtream no será
+                    <strong>⚖️ Limitación de Responsabilidad: </strong><br />
+                    Xtream no será
                     responsable por daños directos, indirectos, incidentales o
                     consecuentes derivados del uso o imposibilidad de uso de la
                     aplicación.
                   </li>
                   <li className="my-1">
-                    <strong>📍 Legislación Aplicable: </strong>- Estos términos se rigen por las
+                    <strong>📍 Legislación Aplicable: </strong><br />
+                    Estos términos se rigen por las
                     leyes de Argentina. - Cualquier disputa será
                     resuelta ante los tribunales competentes de dicha
                     jurisdicción.
                   </li>
                   <li className="my-1">
-                    <strong>✉️ Contacto: </strong>  cualquier consulta relacionada con estos
+                    <strong>✉️ Contacto: </strong><br />
+                    cualquier consulta relacionada con estos
                     Términos y Condiciones, puede contactarnos a través de:
                     <Link to={"/contacto"} onClick={handleClose}> Contacto</Link>.
                   </li>
