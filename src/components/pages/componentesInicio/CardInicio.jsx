@@ -1,6 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {  Col } from 'react-bootstrap';
+import {  Col , } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 
 const CardInicio = () => {
@@ -18,12 +18,11 @@ const CardInicio = () => {
                             <Card.Text>Película de acción y fantasía sobre la realidad simulada.</Card.Text>
                         </Card.Body>
                         <Card.Footer className='text-center'>
-                            <Button variant="success" className='text-center'>Ver más</Button>
+                            <Link className='btn btn-success' path='/Detalles'>Ver más</Link>
                         </Card.Footer>
                     </Card>
                 </Col>
-
-    </>
+        </>
     );
 };
 
