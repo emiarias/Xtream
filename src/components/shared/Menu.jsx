@@ -12,8 +12,8 @@ import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
 
 const Menu = ({ adminUser, setAdminUser }) => {
-  const [hasScrolledToBottom, setHasScrolledToBottom] = useState(false);
-  const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [scrollAlFinal, setScrollAlFinal] = useState(false);
+  const [aceptarTerminos, setAceptarTerminos] = useState(false);
   const termsRef = useRef(null);
 
   const {
@@ -26,12 +26,12 @@ const Menu = ({ adminUser, setAdminUser }) => {
   const handleScroll = () => {
     const el = termsRef.current;
     if (el.scrollTop + el.clientHeight >= el.scrollHeight) {
-      setHasScrolledToBottom(true);
+      setScrollAlFinal(true);
     }
   };
 
   const handleCheckboxChange = (e) => {
-    setAcceptedTerms(e.target.checked);
+    setAceptarTerminos(e.target.checked);
   };
 
   const [show, setShow] = useState(false);
@@ -304,8 +304,8 @@ const Menu = ({ adminUser, setAdminUser }) => {
               <Form.Check
                 type="checkbox"
                 label="He leído y acepto los Términos y Condiciones"
-                disabled={!hasScrolledToBottom}
-                checked={acceptedTerms}
+                disabled={!scrollAlFinal}
+                checked={aceptarTerminos}
                 onChange={handleCheckboxChange}
               />
             </FormGroup>
@@ -315,7 +315,7 @@ const Menu = ({ adminUser, setAdminUser }) => {
                 variant="success"
                 onClick={handleShow}
                 type="submit"
-                disabled={!acceptedTerms}
+                disabled={!aceptarTerminos}
               >
                 Crea tu cuenta
               </Button>
