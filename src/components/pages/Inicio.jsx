@@ -1,5 +1,6 @@
 import CaruselInicio from './componentesInicio/CaruselInicio';
 import CardInicio from './componentesInicio/CardInicio';
+import { Container, Row } from 'react-bootstrap';
 
 
 const Inicio = ({ }) => {
@@ -23,7 +24,16 @@ const Inicio = ({ }) => {
                 <option value='opcion6'>Ver en familia</option>
             </select>
             {/* card */}
-            <CardInicio />
+            <Container className="my-5">
+                <Row>
+                    <CardInicio />
+                    <CardInicio />
+                    <CardInicio />
+                    <CardInicio />
+                    <CardInicio />
+                    <CardInicio />
+                </Row>
+            </Container>
             </article>
         </>
     );
