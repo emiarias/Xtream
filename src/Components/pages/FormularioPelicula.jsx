@@ -15,14 +15,12 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
   const onSubmit = (pelicula) => {
     if (titulo === "Añadir película/serie") {
       console.log(pelicula);
-      //crear el producto nuevo
       if (crearPeliculas(pelicula)) {
         Swal.fire({
           title: "Pelicula creada",
-          text: `La pelicula ${pelicula.titulo} fue creado correctamente.`,
+          text: `La pelicula ${pelicula.title} fue creada correctamente.`,
           icon: "success",
         });
-        //resetear el formulario
         reset();
       }
     }
@@ -37,7 +35,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
           <Form.Control
             type="text"
             placeholder="Ej: Matrix"
-            {...register("titulo", {
+            {...register("title", {
               required: "El título es un dato obligatorio",
               minLength: {
                 value: 1,
@@ -50,7 +48,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.titulo?.message}
+            {errors.title?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
@@ -79,7 +77,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
           <Form.Control
             type="number"
             placeholder="Ej: 1999"
-            {...register("anioEstreno", {
+            {...register("year", {
               required: "El año de estreno es un dato obligatorio",
               min: {
                 value: 1800,
@@ -92,7 +90,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.anioEstreno?.message}
+            {errors.year?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
@@ -100,7 +98,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
           <Form.Control
             type="text"
             placeholder="Ej: https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.jpg"
-            {...register("imagen", {
+            {...register("image", {
               required: "La url de la imagen es un dato obligatorio",
               pattern: {
                 value: /^https?:\/\/.+\.(jpg|jpeg|png|gif)(\?.*)?$/,
@@ -110,13 +108,13 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.imagen?.message}
+            {errors.image?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Tipo*</Form.Label>
           <Form.Select
-            {...register("tipo", {
+            {...register("type", {
               required: "Es obligatorio indicar el tipo",
             })}
           >
@@ -124,12 +122,12 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             <option value="Pelicula">Pelicula</option>
             <option value="Serie">Serie</option>
           </Form.Select>
-          <Form.Text className="text-danger">{errors.tipo?.message}</Form.Text>
+          <Form.Text className="text-danger">{errors.type?.message}</Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Género*</Form.Label>
           <Form.Select
-            {...register("genero", {
+            {...register("genre", {
               required: "El género es un dato obligatorio",
             })}
           >
@@ -145,7 +143,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             <option value="Terror">Terror</option>
           </Form.Select>
           <Form.Text className="text-danger">
-            {errors.genero?.message}
+            {errors.genre?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
@@ -154,7 +152,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             type="text"
             placeholder="Ej: Película de acción y fantasía sobre la realidad simulada."
             as="textarea"
-            {...register("descripcionBreve", {
+            {...register("description_breve", {
               required: "La descripcion breve es un dato obligatorio",
               minLength: {
                 value: 2,
@@ -169,7 +167,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.descripcionBreve?.message}
+            {errors.description_breve?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
@@ -178,7 +176,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             type="text"
             placeholder="Ej: Un hacker descubre que su realidad es una simulación creada por máquinas inteligentes y se une a la rebelión para liberar a la humanidad."
             as="textarea"
-            {...register("descripcionAmplia", {
+            {...register("description_amplia", {
               required: "La descripcion amplia es un dato obligatorio",
               minLength: {
                 value: 2,
@@ -193,7 +191,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.descripcionAmplia?.message}
+            {errors.description_amplia?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
