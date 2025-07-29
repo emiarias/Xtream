@@ -38,7 +38,7 @@ const Administrador = ({ peliculas, setPeliculas, borrarPelicula,  destacarPelic
           </tr>
         </thead>
         <tbody>
-            {peliculas.map((pelicula, indice)=><ItemPelicula key={pelicula.id} fila={indice+1} pelicula={pelicula} destacarPelicula={destacarPelicula}></ItemPelicula>)}
+            {peliculas.map((pelicula, indice)=><ItemPelicula key={pelicula.id} fila={indice+1} pelicula={pelicula} destacarPelicula={destacarPelicula} borrarPelicula={borrarPelicula}></ItemPelicula>)}
         </tbody>
       </Table>
         </section>
