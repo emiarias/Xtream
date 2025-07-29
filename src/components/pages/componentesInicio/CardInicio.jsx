@@ -15,15 +15,18 @@ const CardInicio = ({ pelicula }) => {
                         className="mb-4"
                     >
                         <Card className='h-100'>
+                            <Card.Header>
+                            <Card.Text>{pelicula.type}</Card.Text>
+                            </Card.Header>
                             <Card.Img
                                 variant="top"
-                                src={pelicula.imagen}
+                                src={pelicula.image}
                                 alt="Póster de Matrix"
                                 className='img-fluid'
                             />
-                            <Card.Body>
-                                <Card.Title>{pelicula.titulo}</Card.Title>
-                                <Card.Text>{pelicula.descripcionBreve}</Card.Text>
+                            <Card.Body className='h-100'>
+                                <Card.Title>{pelicula.title}</Card.Title>
+                                <Card.Text>{pelicula.description_breve}</Card.Text>
                                 <Link className='btn btn-success' to={"/detalle"}>Ver más</Link>
                             </Card.Body>
                         </Card>

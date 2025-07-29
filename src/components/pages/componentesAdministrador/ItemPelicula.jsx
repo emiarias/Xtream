@@ -5,12 +5,12 @@ const ItemPelicula = ({ pelicula, fila }) => {
     return (
         <tr>
       <td className="text-center">{fila}</td>
-      <td>{pelicula.titulo}</td>
-      <td className="text-center">{pelicula.tipo}</td>
+      <td>{pelicula.title}</td>
+      <td className="text-center">{pelicula.type}</td>
       <td className="text-center">
-        {pelicula.anioEstreno}
+        {pelicula.year}
       </td>
-      <td>{pelicula.genero}</td>
+      <td>{pelicula.genre}</td>
       <td className="text-center">
         <div className="d-flex gap-1 justify-content-center">
         <Link to={"/administrador/editar"} className="btn btn-warning me-lg-2">

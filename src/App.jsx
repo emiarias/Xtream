@@ -56,7 +56,7 @@ function App() {
               path="/administrador"
               element={<ProtectorAdmin adminUser={adminUser}></ProtectorAdmin>}
             >
-              <Route index element={<Administrador peliculas={peliculas}></Administrador>}></Route>
+              <Route index element={<Administrador peliculas={peliculas} setPeliculas={setPeliculas}></Administrador>}></Route>
 
               <Route
                 path="crear"
