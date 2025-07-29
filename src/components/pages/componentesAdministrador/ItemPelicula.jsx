@@ -45,7 +45,7 @@ const ItemPelicula = ({ pelicula, fila, borrarPelicula }) => {
       <td>{pelicula.genre}</td>
       <td className="text-center">
         <div className="d-flex gap-1 justify-content-center">
-        <Link to={"/administrador/editar"} className="btn btn-warning me-lg-2">
+        <Link to={`/administrador/editar/${pelicula.id}`} className="btn btn-warning me-lg-2">
           <i className="bi bi-pencil-square"></i>
         </Link>
         <Button variant="danger" onClick={eliminarPelicula}>
