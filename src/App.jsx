@@ -32,6 +32,11 @@ function App() {
     return true
   }
 
+  const buscarPelicula = (idPelicula) => {
+    const peliculaBuscada = peliculas.find((itemPelicula)=> itemPelicula.id==idPelicula)
+    return peliculaBuscada
+  }
+
   return (
     <>
       <BrowserRouter>
@@ -44,8 +49,8 @@ function App() {
               element={<Login setAdminUser={setAdminUser}></Login>}
             ></Route>
             <Route
-              path="/detalle"
-              element={<DetallePelicula></DetallePelicula>}
+              path="/detalle/:id"
+              element={<DetallePelicula buscarPelicula={buscarPelicula}></DetallePelicula>}
             ></Route>
             <Route path="/contacto" element={<Contacto></Contacto>}></Route>
             <Route
