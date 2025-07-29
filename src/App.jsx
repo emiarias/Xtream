@@ -20,6 +20,11 @@ function App() {
   const [adminUser, setAdminUser] = useState(userLogueado);
   const peliculasLocalstorage = JSON.parse(localStorage.getItem('carteleraPeliculas')) || []
   const [peliculas, setPeliculas] = useState(peliculasLocalstorage)
+  const [terminoBusqueda, setTerminoBusqueda] = useState('');
+
+  const handleInputMenuChange = (e) => {
+    setTerminoBusqueda(e.target.value)
+  }
   
     useEffect(()=>{
     localStorage.setItem('carteleraPeliculas', JSON.stringify(peliculas))
@@ -46,7 +51,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Menu adminUser={adminUser} setAdminUser={setAdminUser}></Menu>
+        <Menu adminUser={adminUser} setAdminUser={setAdminUser} terminoBusqueda={terminoBusqueda} handleInputMenuChange={handleInputMenuChange}></Menu>
         <main>
           <Routes>
             <Route path="/" element={<Inicio peliculas={peliculas}></Inicio>}></Route>

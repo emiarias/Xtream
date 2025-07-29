@@ -11,7 +11,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
 
-const Menu = ({ adminUser, setAdminUser }) => {
+const Menu = ({ adminUser, setAdminUser, handleInputMenuChange, terminoBusqueda }) => {
 
   const {
     register,
@@ -67,8 +67,10 @@ const Menu = ({ adminUser, setAdminUser }) => {
                 <Col xs="auto">
                   <Form.Control
                     type="text"
-                    placeholder="Buscar"
+                    placeholder="Pelicula/Serie"
                     className="buscadorNav"
+                    onChange={handleInputMenuChange}
+                    value={terminoBusqueda}
                   />
                 </Col>
               </Row>
