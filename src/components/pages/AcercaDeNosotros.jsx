@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import juanImg from '../../assets/imagen_equipo/juan-blanco.jpeg';
 import miltonImg from '../../assets/imagen_equipo/Milton-Mamani.jpeg';
@@ -30,30 +29,32 @@ const miembros = [
 function AcercaDeNosotros() {
   return (
     <Container className="py-5">
-      <h1 className="text-center mb-4">Acerca de Nosotros</h1>
-      
-      <section className="mb-5">
+      <h1 className="text-center mb-4 titulo-gradiente">Acerca de Nosotros</h1>
+
+      <section className="mb-5 bg-vision">
         <h3 className="text-center">Nuestra Visión</h3>
+        <strong>
         <p>
           En Xtream, creemos en una experiencia de entretenimiento sin límites.
           Nuestra visión es revolucionar la forma en que las personas disfrutan
           del contenido audiovisual, brindando acceso a lo mejor del cine y las
           series desde cualquier lugar.
-        </p>
+        </p></strong>
       </section>
-      <hr/>
-      <section className="mb-5">
+
+      <section className="mb-5 bg-objetivo">
         <h3 className="text-center">Nuestro Objetivo</h3>
-        <p>
+        
+        <strong><p>
           Nuestro objetivo es ofrecer una plataforma intuitiva, moderna y
           accesible para que nuestros usuarios encuentren sus películas y series
           favoritas con facilidad, además de descubrir nuevos títulos cada
           semana.
-        </p>
+        </p></strong>
       </section>
       <hr/>
       <section>
-        <h3 className="mb-4 text-center">Nuestro Equipo</h3>
+        <h2 className="mb-4 text-center fuenteEquipo">Nuestro Equipo</h2>
         <Row xs={1} sm={2} md={4} className="g-4">
           {miembros.map((miembro, idx) => (
             <Col key={idx}>
