@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Link, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import Swal from "sweetalert2";
 
-const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula }) => {
+const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula, editarPelicula }) => {
   const {
     register,
     handleSubmit,
@@ -14,6 +14,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula }) => {
   } = useForm();
 
   const {id} = useParams()
+  const navegacion = useNavigate()
 
   useEffect(()=>{
     if(titulo==="Editar película/serie"){
@@ -41,6 +42,15 @@ const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula }) => {
         });
         reset();
       }
+    } else{
+      if (editarPelicula(id, pelicula)) {
+        Swal.fire({
+          title: "Pelicula editada",
+          text: `La pelicula/serie ${pelicula.title} fue editada correctamente.`,
+          icon: "success",
+        });
+      }
+      navegacion('/administrador')
     }
   }
 
