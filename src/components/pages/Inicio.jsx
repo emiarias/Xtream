@@ -1,12 +1,12 @@
 import CaruselInicio from "./componentesInicio/CaruselInicio";
 import CardInicio from "./componentesInicio/CardInicio";
-import { Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
-const Inicio = ({ peliculas }) => {
+const Inicio = ({peliculas}) => {
   return (
     <>
       {/* carusel*/}
-      <CaruselInicio className="container" />
+      <CaruselInicio className="container"/>
       <article className="container">
         {/* titulo principal */}
         <h1 className="text-center mb-3 mt-3 tinos"> Bienvenidos a Xtream </h1>
