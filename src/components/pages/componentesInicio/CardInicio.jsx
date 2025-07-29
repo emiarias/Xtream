@@ -22,13 +22,21 @@ const CardInicio = ({ pelicula }) => {
                                 variant="top"
                                 src={pelicula.image}
                                 alt="Póster de Matrix"
-                                className='img-fluid'
+                                className='h-100 overflow-hidden'
                             />
                             <Card.Body className='h-100'>
-                                <Card.Title>{pelicula.title}</Card.Title>
+                                
+                                <Card.Title className='mb-3'>{pelicula.title}</Card.Title>
+                                <div className='d-flex flex-column'>
+                                    <Card.Text>Año: {pelicula.year}</Card.Text>
+                                    <Card.Text>Género: {pelicula.genre}</Card.Text>
+                                </div>
+                                <hr/>
                                 <Card.Text>{pelicula.description_breve}</Card.Text>
-                                <Link className='btn btn-success' to={"/detalle"}>Ver más</Link>
+                                
                             </Card.Body>
+                            <Card.Footer>
+                                <Link className='btn btn-success' to={"/detalle"}>Ver más</Link></Card.Footer>
                         </Card>
                     </Col>
     </>
