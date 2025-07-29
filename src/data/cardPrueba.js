@@ -1,4 +1,4 @@
-const cardsData = [
+export const cardsData = [
   // Películas
 {
   id: 1,
