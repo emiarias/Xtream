@@ -3,6 +3,7 @@ import juanImg from '../../assets/imagen_equipo/juan-blanco.jpeg';
 import miltonImg from '../../assets/imagen_equipo/Milton-Mamani.jpeg';
 import lucasImg from '../../assets/imagen_equipo/Lucas-figueroa.jpeg';
 import alejandroImg from '../../assets/imagen_equipo/alejandro-insinga.jpeg';
+
 const miembros = [
   {
     nombre: "Juan Manuel Blanco",
