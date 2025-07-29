@@ -10,12 +10,10 @@ const CardInicio = ({ pelicula }) => {
                         xs={12}       
                         sm={6}        
                         md={4}        
-                        lg={3}        
-                        xl={2.4}      
-                        className="mb-4"
+                        lg={3}
                     >
-                        <Card className='h-100'>
-                            <Card.Header>
+                        <Card className='h-100 sombraCard'>
+                            <Card.Header className='bg-success'>
                             <Card.Text>{pelicula.type}</Card.Text>
                             </Card.Header>
                             <Card.Img
