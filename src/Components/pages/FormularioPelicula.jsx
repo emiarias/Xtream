@@ -151,6 +151,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula }) => {
           >
             <option value="">Seleccione una opcion</option>
             <option value="Acción">Acción</option>
+            <option value="Animación">Animación</option>
             <option value="Aventura">Aventura</option>
             <option value="Ciencia ficción">Ciencia Ficción</option>
             <option value="Crimen">Crimen</option>
