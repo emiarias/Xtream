@@ -37,6 +37,12 @@ function App() {
     return peliculaBuscada
   }
 
+  const borrarPelicula = (idPelicula) => {
+    const peliculasFiltradas = peliculas.filter((itemPelicula)=>itemPelicula.id!==idPelicula)
+    setPeliculas(peliculasFiltradas)
+    return true
+  }
+
   return (
     <>
       <BrowserRouter>
@@ -61,7 +67,7 @@ function App() {
               path="/administrador"
               element={<ProtectorAdmin adminUser={adminUser}></ProtectorAdmin>}
             >
-              <Route index element={<Administrador peliculas={peliculas} setPeliculas={setPeliculas}></Administrador>}></Route>
+              <Route index element={<Administrador peliculas={peliculas} setPeliculas={setPeliculas} borrarPelicula={borrarPelicula}></Administrador>}></Route>
 
               <Route
                 path="crear"
