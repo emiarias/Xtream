@@ -25,7 +25,7 @@ const Inicio = ({ peliculas }) => {
           <option value="opcion6">Ver en familia</option>
         </select>
         {/* card */}
-          <Row className="row-gap-3 justify-content-center">
+          <Row className="row-gap-3 justify-content-center my-3">
             {peliculas.map((pelicula)=>(
                 <CardInicio key={pelicula.id} pelicula={pelicula}/>
             ))}
