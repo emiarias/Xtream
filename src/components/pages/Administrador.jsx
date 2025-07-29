@@ -3,7 +3,7 @@ import ItemPelicula from './componentesAdministrador/ItemPelicula';
 import { Link } from 'react-router';
 import {cardsData} from '../../data/cardPrueba'
 
-const Administrador = ({ peliculas, setPeliculas }) => {
+const Administrador = ({ peliculas, setPeliculas, borrarPelicula }) => {
 
   const cargarDatosPrueba = () => {
     setPeliculas(cardsData)
@@ -38,7 +38,7 @@ const Administrador = ({ peliculas, setPeliculas }) => {
           </tr>
         </thead>
         <tbody>
-            {peliculas.map((pelicula, indice)=><ItemPelicula key={pelicula.id} fila={indice+1} pelicula={pelicula}></ItemPelicula>)}
+            {peliculas.map((pelicula, indice)=><ItemPelicula key={pelicula.id} fila={indice+1} pelicula={pelicula} borrarPelicula={borrarPelicula}></ItemPelicula>)}
         </tbody>
       </Table>
         </section>
