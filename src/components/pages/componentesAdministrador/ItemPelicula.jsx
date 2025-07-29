@@ -52,7 +52,7 @@ const ItemPelicula = ({ pelicula, fila, borrarPelicula, destacarPelicula}) => {
           <i className="bi bi-trash"></i>
         </Button>
         <Button variant="transparent" onClick={() => destacarPelicula(pelicula.id)}>
-          <i className="bi bi-star text-success"></i>
+          {pelicula.destacada? <i className="bi bi-star-fill fs-4 text-success"></i> : <i className="bi bi-star text-success"></i>}
         </Button>
         </div>
       </td>
