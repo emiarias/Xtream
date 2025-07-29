@@ -1,8 +1,14 @@
 import { Button, Table } from 'react-bootstrap';
 import ItemPelicula from './componentesAdministrador/ItemPelicula';
 import { Link } from 'react-router';
+import {cardsData} from '../../data/cardPrueba'
 
-const Administrador = () => {
+const Administrador = ({ peliculas, setPeliculas }) => {
+
+  const cargarDatosPrueba = () => {
+    setPeliculas(cardsData)
+  }
+
     return (
         <section className='container'>
            <div className="row justify-content-between align-items-center mt-5">
@@ -12,7 +18,7 @@ const Administrador = () => {
             Agregar película/serie
             <i className="bi bi-file-earmark-plus ms-2"></i>
           </Link>
-          <Button className="btn btn-info ms-2">
+          <Button className="btn btn-info ms-2" onClick={cargarDatosPrueba}>
             <i
               className="bi bi-database-fill-add"
             ></i>
@@ -32,7 +38,7 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-            <ItemPelicula></ItemPelicula>
+            {peliculas.map((pelicula, indice)=><ItemPelicula key={pelicula.id} fila={indice+1} pelicula={pelicula}></ItemPelicula>)}
         </tbody>
       </Table>
         </section>

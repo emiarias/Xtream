@@ -1,38 +1,203 @@
-  const cardsData = [
-    {
-      title: "Matrix",
-      image: "https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.progressive.jpg?v=1573587596",
-      description: "Película de acción y fantasía sobre la realidad simulada.",
-      alt: "Póster de Matrix"
-    },
-    {
-      title: "El Padrino",
-      image: "https://www.movieposters.com/cdn/shop/products/godfather.2436_480x.progressive.jpg?v=1654018929",
-      description: "Clásico del cine sobre la familia mafiosa Corleone.",
-      alt: "Póster de El Padrino"
-    },
-    {
-      title: "Interestelar",
-      image: "https://www.movieposters.com/cdn/shop/products/interstellar_2014_advance_small_480x.progressive.jpg?v=1573656827",
-      description: "Episodio épico de ciencia ficción sobre el espacio y el tiempo.",
-      alt: "Póster de Interestelar"
-    },
-    {
-      title: "Parásitos",
-      image: "https://www.movieposters.com/cdn/shop/products/parasite_480x.progressive.jpg?v=1582783814",
-      description: "Thriller dramático sobre las diferencias sociales en Corea.",
-      alt: "Póster de Parásitos"
-    },
-    {
-      title: "Titanic",
-      image: "https://www.movieposters.com/cdn/shop/products/titanic.2433_480x.progressive.jpg?v=1654018929",
-      description: "Historia de amor épica en el famoso barco hundido.",
-      alt: "Póster de Titanic"
-    },
-    {
-      title: "Jurassic Park",
-      image: "https://www.movieposters.com/cdn/shop/products/jurassicpark.2432_480x.progressive.jpg?v=1654018929",
-      description: "Aventura con dinosaurios clonados en una isla remota.",
-      alt: "Póster de Jurassic Park"
-    }
-  ];
+export const cardsData = [
+  // Películas
+{
+  id: 1,
+  title: "Avengers: Infinity War",
+  image: "https://m.media-amazon.com/images/I/81ExhpBEbHL._AC_SL1500_.jpg",
+  description_breve: "Los héroes se unen para enfrentar a Thanos.",
+  description_amplia: "Los Avengers y sus aliados deben detener al poderoso Thanos, que busca reunir las Gemas del Infinito para imponer su voluntad y destruir la mitad del universo.",
+  alt: "Póster oficial de Avengers: Infinity War",
+  type: "pelicula",
+  genre: "Acción",
+  year: 2018,
+  director: "Anthony y Joe Russo",
+  trailer: "https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+},
+{
+  id: 2,
+  title: "Avengers: Endgame",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJ2eBhUA1bqyX_zIUtb21M5o9Zf4EQhYeuA&s",
+  description_breve: "El épico final de la saga de los Avengers.",
+  description_amplia: "Tras la devastación causada por Thanos, los Avengers restantes elaboran un plan para deshacer sus actos y restaurar el orden en el universo, enfrentándose a grandes sacrificios.",
+  alt: "Póster oficial de Avengers: Endgame",
+  type: "pelicula",
+  genre: "Acción",
+  year: 2019,
+  director: "Anthony y Joe Russo",
+  trailer: "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+},
+{
+    id: 3,
+    title: "Matrix",
+    image: "https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.progressive.jpg?v=1573587596",
+    description_breve: "Película de acción y ciencia ficción sobre una realidad simulada.",
+    description_amplia: "Un hacker descubre que su realidad es una simulación creada por máquinas inteligentes y se une a la rebelión para liberar a la humanidad.",
+    alt: "Póster de Matrix",
+    type: "pelicula",
+    genre: "Ciencia ficción",
+    year: 1999,
+    director: "Lana y Lilly Wachowski",
+    trailer: "https://www.youtube.com/watch?v=vKQi3bBA1y8"
+  },
+  {
+    id: 4,
+    title: "El Padrino",
+    image: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    description_breve: "Clásico drama sobre la mafia italoamericana.",
+    description_amplia: "La saga de la familia Corleone, liderada por Don Vito, explora temas de poder, lealtad y traición.",
+    alt: "Póster de El Padrino",
+    type: "pelicula",
+    genre: "Drama",
+    year: 1972,
+    director: "Francis Ford Coppola",
+    trailer: "https://www.youtube.com/watch?v=sY1S34973zA"
+  },
+  {
+    id: 5,
+    title: "Interestelar",
+    image: "https://m.media-amazon.com/images/I/91obuWzA3XL._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Viaje interestelar para salvar a la humanidad.",
+    description_amplia: "Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
+    alt: "Póster de Interestelar",
+    type: "pelicula",
+    genre: "Ciencia ficción",
+    year: 2014,
+    director: "Christopher Nolan",
+    trailer: "https://www.youtube.com/watch?v=UoSSbmD9vqc"
+  },
+  {
+    id: 6,
+    title: "Parásitos",
+    image: "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+    description_breve: "Sátira social ganadora del Óscar.",
+    description_amplia: "Una familia pobre se infiltra en la vida de una familia adinerada, desencadenando eventos inesperados.",
+    alt: "Póster de Parásitos",
+    type: "pelicula",
+    genre: "Thriller",
+    year: 2019,
+    director: "Bong Joon-ho",
+    trailer: "https://www.youtube.com/watch?v=isOGD_7hNIY"
+  },
+  {
+    id: 7,
+    title: "Pulp Fiction",
+    image: "https://m.media-amazon.com/images/I/71c05lTE03L._AC_UF1000,1000_QL80_.jpg",
+    description_breve: "Historia no lineal sobre crimen y redención.",
+    description_amplia: "Varias historias de gánsters, boxeadores y un misterioso maletín se entrelazan en esta obra maestra.",
+    alt: "Póster de Pulp Fiction",
+    type: "pelicula",
+    genre: "Crimen",
+    year: 1994,
+    director: "Quentin Tarantino",
+    trailer: "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
+  }, 
+{
+  id: 8,
+  title: "The Shawshank Redemption",
+  image: "https://m.media-amazon.com/images/I/51NiGlapXlL._AC_.jpg",
+  description_breve: "Una historia de esperanza y amistad en prisión.",
+  description_amplia: "Un banquero injustamente condenado forja una amistad en prisión y encuentra la redención con el paso de los años.",
+  alt: "Póster de The Shawshank Redemption",
+  type: "pelicula",
+  genre: "Drama",
+  year: 1994,
+  director: "Frank Darabont",
+  trailer: "https://www.youtube.com/watch?v=6hB3S9bIaco"
+},
+// series
+{
+  id: 9,
+  title: "Peaky Blinders",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa7K15zDr94Jj1gT0F3Xnn2fWPPIsq9UQS2w&s", 
+  description_breve: "Una familia criminal en el Birmingham de posguerra.",
+  description_amplia: "Liderados por el astuto Tommy Shelby, los Peaky Blinders construyen un imperio criminal mientras enfrentan enemigos, la ley y sus propios demonios en la Inglaterra de los años 20.",
+  alt: "Póster oficial de la serie Peaky Blinders",
+  type: "serie",
+  genre: "Crimen",
+  year: 2013,
+  director: "Steven Knight",
+  trailer: "https://www.youtube.com/watch?v=oVzVdvGIC7U"
+},
+{
+  id: 10,
+  title: "Vikings",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ACseEOhkPymYhg7uhthMiydmhzdTUap5cA&s", 
+  description_breve: "La saga épica de Ragnar Lothbrok y los primeros vikingos.",
+  description_amplia: "Inspirada en las sagas del legendario Ragnar Lothbrok, cuenta cómo pasa de granjero a rey escandinavo liderando incursiones en Inglaterra y más allá, acompañado por su familia y guerreros. A lo largo de seis temporadas sigue también a sus hijos y su expansión por Europa.",
+  alt: "Póster oficial de la serie Vikings",
+  type: "serie",
+  genre: "Drama histórico",
+  year: 2013,
+  director: "Michael Hirst",
+  trailer: "https://www.youtube.com/watch?v=2HeycBS4edw"
+},
+{
+  id: 11,
+  title: "Game of Thrones",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX-5tjuwxUUzUqrsGYoGyOC4MrDgTiuddGZQ&s", 
+  description_breve: "Intrigas, poder y traición en los Siete Reinos.",
+  description_amplia: "Adaptación de la saga de novelas de George R. R. Martin, sigue la lucha por el Trono de Hierro entre familias nobles en un mundo donde el invierno se aproxima y fuerzas oscuras resurgirán. Es una historia épica de poder, sacrificio y traición.",
+  alt: "Póster oficial de Game of Thrones temporada 8",
+  type: "serie",
+  genre: "Fantasía",
+  year: 2011,
+  director: "David Benioff & D. B. Weiss (showrunners)",
+  trailer: "https://www.youtube.com/watch?v=IznyEBoUcuk" 
+},
+{
+  id: 12,
+  title: "El juego del calamar 3",
+  image: "https://http2.mlstatic.com/D_NQ_NP_617665-MLA80194644714_112024-O.webp",
+  description_breve: "Un juego mortal con millones en juego.",
+  description_amplia: "456 personas con deudas aceptan participar en una serie de juegos infantiles con reglas mortales. Solo uno podrá ganar el premio final de ₩45.600 millones. Una crítica social sobre la desigualdad y la desesperación.",
+  alt: "Póster oficial de la serie El juego del calamar",
+  type: "serie",
+  genre: "Drama",
+  year: 2021,
+  director: "Hwang Dong-hyuk",
+  trailer: "https://www.youtube.com/watch?v=cTpISvwP9DM"
+},
+// surtidas
+{
+  id: 13,
+  title: "The Avengers",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLLJW_dERZbapISvdyIYyFrwljCNx7DCxtDw&s",
+  description_breve: "Los héroes se reúnen por primera vez.",
+  description_amplia: "Nick Fury reúne a un equipo de superhéroes para enfrentar una amenaza global liderada por Loki, hermano adoptivo de Thor, en la primera gran aventura de los Avengers.",
+  alt: "Póster oficial de The Avengers",
+  type: "pelicula",
+  genre: "Acción",
+  year: 2012,
+  director: "Joss Whedon",
+  trailer: "https://www.youtube.com/watch?v=eOrNdBpGMv8"
+}
+,{
+  id: 14,
+  title: "Minions",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe9TNv7qx9SJW-VSM5W8i3k-xX72TwfaJxHw&s",
+  description_breve: "Pequeñas criaturas amarillas con una gran misión.",
+  description_amplia: "Los Minions buscan a un nuevo villano para servir y terminan ayudando a la villana Scarlett Overkill en una aventura llena de humor y acción.",
+  alt: "Póster oficial de Minions",
+  type: "pelicula",
+  genre: "Animación",
+  year: 2015,
+  director: "Pierre Coffin, Kyle Balda",
+  trailer: "https://www.youtube.com/watch?v=LSw_te6wexM"
+}, 
+
+{
+  id: 15,
+  title: "Los Croods",
+  image: "https://m.media-amazon.com/images/I/71nmuZLbRqL.jpg",
+  description_breve: "Una familia prehistórica en una aventura inesperada.",
+  description_amplia: "Los Croods son una familia cavernícola que debe adaptarse a un mundo cambiante mientras buscan un nuevo hogar, enfrentando peligros y descubriendo la importancia del cambio y la familia.",
+  alt: "Póster oficial de Los Croods",
+  type: "pelicula",
+  genre: "Animación",
+  year: 2013,
+  director: "Kirk DeMicco, Chris Sanders",
+  trailer: "https://www.youtube.com/watch?v=lNk1XIejGRA"
+}
+
+];
+ 

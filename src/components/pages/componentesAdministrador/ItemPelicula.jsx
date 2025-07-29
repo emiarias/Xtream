@@ -1,16 +1,16 @@
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router';
 
-const ItemPelicula = () => {
+const ItemPelicula = ({ pelicula, fila }) => {
     return (
         <tr>
-      <td className="text-center">1</td>
-      <td>Matrix</td>
-      <td className="text-center">Película</td>
+      <td className="text-center">{fila}</td>
+      <td>{pelicula.title}</td>
+      <td className="text-center">{pelicula.type}</td>
       <td className="text-center">
-        1999
+        {pelicula.year}
       </td>
-      <td>Ciencia ficción</td>
+      <td>{pelicula.genre}</td>
       <td className="text-center">
         <div className="d-flex gap-1 justify-content-center">
         <Link to={"/administrador/editar"} className="btn btn-warning me-lg-2">

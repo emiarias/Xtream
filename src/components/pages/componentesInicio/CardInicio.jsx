@@ -1,13 +1,11 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Container, Row, Col } from 'react-bootstrap';
+import {  Col , } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 
-const CardInicio = () => {
+const CardInicio = ({ pelicula }) => {
 
     return (<>
-        <Container className="my-5">
-            <Row>
                <Col
                         xs={12}       
                         sm={6}        
@@ -16,25 +14,33 @@ const CardInicio = () => {
                         xl={2.4}      
                         className="mb-4"
                     >
-                        <Card>
+                        <Card className='h-100'>
+                            <Card.Header>
+                            <Card.Text>{pelicula.type}</Card.Text>
+                            </Card.Header>
                             <Card.Img
                                 variant="top"
-                                src="https://www.movieposters.com/cdn/shop/products/ed4796ac6feff9d2a6115406f964c928_6b200bda-fe71-4900-ad7f-903cdda50dab_480x.progressive.jpg?v=1573587596"
+                                src={pelicula.image}
                                 alt="Póster de Matrix"
-                                className='img-fluid'
+                                className='h-100 overflow-hidden'
                             />
-                            <Card.Body>
-                                <Card.Title>Matrix</Card.Title>
-                                <Card.Text>Película de acción y fantasía sobre la realidad simulada.</Card.Text>
-                                <Button variant="primary">Ver más</Button>
+                            <Card.Body className='h-100'>
+                                
+                                <Card.Title className='mb-3'>{pelicula.title}</Card.Title>
+                                <div className='d-flex flex-column'>
+                                    <Card.Text>Año: {pelicula.year}</Card.Text>
+                                    <Card.Text>Género: {pelicula.genre}</Card.Text>
+                                </div>
+                                <hr/>
+                                <Card.Text>{pelicula.description_breve}</Card.Text>
+                                
                             </Card.Body>
+                            <Card.Footer>
+                                <Link className='btn btn-success' to={"/detalle"}>Ver más</Link></Card.Footer>
                         </Card>
                     </Col>
-            </Row>
-        </Container>
     </>
     );
 };
-
 
 export default CardInicio;
