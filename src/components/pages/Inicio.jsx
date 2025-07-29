@@ -2,7 +2,10 @@ import CaruselInicio from "./componentesInicio/CaruselInicio";
 import CardInicio from "./componentesInicio/CardInicio";
 import { Container, Row } from "react-bootstrap";
 
-const Inicio = ({ peliculas }) => {
+const Inicio = ({ peliculas, terminoBusqueda }) => {
+
+    const filtrarPeliculas = peliculas.filter((pelicula)=> pelicula.title.toLowerCase().includes(terminoBusqueda.toLowerCase()))
+
   return (
     <>
       {/* carusel*/}
@@ -26,7 +29,7 @@ const Inicio = ({ peliculas }) => {
         </select>
         {/* card */}
           <Row className="row-gap-3 justify-content-center my-3">
-            {peliculas.map((pelicula)=>(
+            {filtrarPeliculas.map((pelicula)=>(
                 <CardInicio key={pelicula.id} pelicula={pelicula}/>
             ))}
           </Row>
