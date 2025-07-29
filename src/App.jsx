@@ -44,7 +44,7 @@ function App() {
               element={<Login setAdminUser={setAdminUser}></Login>}
             ></Route>
             <Route
-              path="/detalle"
+              path="/detalle/:id"
               element={<DetallePelicula></DetallePelicula>}
             ></Route>
             <Route path="/contacto" element={<Contacto></Contacto>}></Route>
