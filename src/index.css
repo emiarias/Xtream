@@ -84,3 +84,14 @@ main {
 .imagen-detalle-pelicula:hover {
   filter: grayscale(0%);
 }
+
+.sombraCard{
+  box-shadow: 0 4px 16px 0 rgba(34, 197, 94, 0.4); 
+
+}
+
+.sombraCard:hover {
+  box-shadow: 0 8px 20px 0 rgba(15, 241, 102, 0.6); 
+  border: 2px solid rgb(93, 249, 151);
+  border-radius: 20px;  
+}

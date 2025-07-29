@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 const CardInicio = () => {
 
     return (<>
-         <Col xs={12} sm={12} md={6} lg={3} className="mb-4">
+         <Col xs={12} sm={12} md={6} lg={3} className="mb-4 sombraCard">
                     <Card className='h-100'>
                         <Card.Img
                             variant="top"
