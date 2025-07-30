@@ -1,8 +1,12 @@
 import CaruselInicio from "./componentesInicio/CaruselInicio";
 import CardInicio from "./componentesInicio/CardInicio";
-import { Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
-const Inicio = ({ peliculas }) => {
+const Inicio = ({ peliculas, terminoBusqueda }) => {
+  const filtrarPeliculas = peliculas.filter((pelicula) =>
+    pelicula.title.toLowerCase().includes(terminoBusqueda.toLowerCase())
+  );
+
   return (
     <>
       {/* carusel*/}
@@ -25,11 +29,20 @@ const Inicio = ({ peliculas }) => {
           <option value="opcion6">Ver en familia</option>
         </select>
         {/* card */}
-          <Row className="row-gap-3 justify-content-center my-3">
-            {peliculas.map((pelicula)=>(
-                <CardInicio key={pelicula.id} pelicula={pelicula}/>
-            ))}
-          </Row>
+        <Row className="row-gap-3 justify-content-center my-3">
+          {filtrarPeliculas.length > 0 ? (
+            filtrarPeliculas.map((pelicula) => (
+              <CardInicio key={pelicula.id} pelicula={pelicula} />
+            ))
+          ) : (
+            <>
+              <h3 className="text-center mb-0">
+                No se encontraron peliculas para mostrar <i className="bi bi-emoji-frown-fill text-success fs-5"></i>
+              </h3>
+              <h5 className="text-center text-danger">Lo sentimos <i className="bi bi-heartbreak-fill"></i></h5>
+            </>
+          )}
+        </Row>
       </article>
     </>
   );

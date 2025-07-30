@@ -10,8 +10,13 @@ import { Button, FormControl, FormGroup, FormLabel } from "react-bootstrap";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
+  
+const Menu = ({ adminUser, setAdminUser, terminoBusqueda, setTerminoBusqueda }) => {
 
-const Menu = ({ adminUser, setAdminUser }) => {
+    const handleInputMenuChange = (e) => {
+    setTerminoBusqueda(e.target.value)
+  }
+
   const [aceptarTerminos, setAceptarTerminos] = useState(false);
   const termsRef = useRef(null);
 
@@ -73,8 +78,10 @@ const Menu = ({ adminUser, setAdminUser }) => {
                 <Col xs="auto">
                   <Form.Control
                     type="text"
-                    placeholder="Buscar"
+                    placeholder="Buscar Pelicula/Serie"
                     className="buscadorNav"
+                    onChange={handleInputMenuChange}
+                    value={terminoBusqueda}
                   />
                 </Col>
               </Row>

@@ -18,15 +18,15 @@ const ItemPelicula = ({ pelicula, fila, borrarPelicula }) => {
   if (result.isConfirmed) {
     if(borrarPelicula(pelicula.id)){
       Swal.fire({
-      title: "Producto eliminado!",
-      text: `El producto ${pelicula.title} fue eliminado correctamente`,
+      title: "Producto eliminada!",
+      text: `La película/serie ${pelicula.title} fue eliminada correctamente`,
       icon: "success"
     });
     }
     else{
       Swal.fire({
-      title: "Producto eliminado!",
-      text: `El producto ${pelicula.title} no pudo ser eliminado`,
+      title: "Ocurrió un error!",
+      text: `La película/serie ${pelicula.title} no pudo ser eliminada`,
       icon: "error"
     });
     }
@@ -45,7 +45,7 @@ const ItemPelicula = ({ pelicula, fila, borrarPelicula }) => {
       <td>{pelicula.genre}</td>
       <td className="text-center">
         <div className="d-flex gap-1 justify-content-center">
-        <Link to={"/administrador/editar"} className="btn btn-warning me-lg-2">
+        <Link to={`/administrador/editar/${pelicula.id}`} className="btn btn-warning me-lg-2">
           <i className="bi bi-pencil-square"></i>
         </Link>
         <Button variant="danger" onClick={eliminarPelicula}>
