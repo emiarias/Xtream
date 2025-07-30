@@ -18,15 +18,15 @@ const ItemPelicula = ({ pelicula, fila, borrarPelicula, destacarPelicula}) => {
   if (result.isConfirmed) {
     if(borrarPelicula(pelicula.id)){
       Swal.fire({
-      title: "Producto eliminado!",
-      text: `El producto ${pelicula.title} fue eliminado correctamente`,
+      title: "Película/serie eliminada!",
+      text: `La película/serie ${pelicula.title} fue eliminada correctamente`,
       icon: "success"
     });
     }
     else{
       Swal.fire({
-      title: "Producto eliminado!",
-      text: `El producto ${pelicula.title} no pudo ser eliminado`,
+      title: "Ocurrió un error!",
+      text: `La película/serie ${pelicula.title} no pudo ser eliminada`,
       icon: "error"
     });
     }

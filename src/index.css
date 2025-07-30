@@ -81,6 +81,15 @@ main {
 .imagen-detalle-pelicula:hover {
   filter: grayscale(0%);
 }
+
+
+.terminos-condiciones {
+  overflow-y: auto;
+  border: 1px dotted #00e701;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
   /* Cambia el color de los indicadores (rallitas) del carrusel */
   .carousel-indicators [data-bs-target] {
     background-color: #fff !important;
@@ -236,3 +245,4 @@ main {
   box-shadow: 0 8px 20px 0 rgba(15, 241, 102, 0.6); 
   border: 2px solid rgb(93, 249, 151);
 }
+

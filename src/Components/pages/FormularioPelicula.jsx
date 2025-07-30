@@ -36,8 +36,8 @@ const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula, editarPeli
       console.log(pelicula);
       if (crearPeliculas(pelicula)) {
         Swal.fire({
-          title: "Pelicula creada",
-          text: `La pelicula ${pelicula.title} fue creada correctamente.`,
+          title: "Pelicula/serie creada",
+          text: `La pelicula/serie ${pelicula.title} fue creada correctamente.`,
           icon: "success",
         });
         reset();
@@ -45,7 +45,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula, editarPeli
     } else{
       if (editarPelicula(id, pelicula)) {
         Swal.fire({
-          title: "Pelicula editada",
+          title: "Pelicula/serie editada",
           text: `La pelicula/serie ${pelicula.title} fue editada correctamente.`,
           icon: "success",
         });

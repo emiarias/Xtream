@@ -7,15 +7,18 @@ import Col from "react-bootstrap/Col";
 import { NavLink, Link, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { Button, FormControl, FormGroup, FormLabel } from "react-bootstrap";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
-
+  
 const Menu = ({ adminUser, setAdminUser, terminoBusqueda, setTerminoBusqueda }) => {
 
     const handleInputMenuChange = (e) => {
     setTerminoBusqueda(e.target.value)
   }
+
+  const [aceptarTerminos, setAceptarTerminos] = useState(false);
+  const termsRef = useRef(null);
 
   const {
     register,
@@ -23,6 +26,10 @@ const Menu = ({ adminUser, setAdminUser, terminoBusqueda, setTerminoBusqueda }) 
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const handleCheckboxChange = (e) => {
+    setAceptarTerminos(e.target.checked);
+  };
 
   const [show, setShow] = useState(false);
 
@@ -105,7 +112,12 @@ const Menu = ({ adminUser, setAdminUser, terminoBusqueda, setTerminoBusqueda }) 
                     <NavLink to={"/login"} className="tinos nav-link">
                       Login
                     </NavLink>
-                    <Button className="tinos nav-link boton-crea-cuenta" onClick={handleShow}>Crea tu cuenta</Button>
+                    <Button
+                      className="tinos nav-link boton-crea-cuenta"
+                      onClick={handleShow}
+                    >
+                      Crea tu cuenta
+                    </Button>
                   </>
                 )}
               </Nav>
@@ -115,7 +127,7 @@ const Menu = ({ adminUser, setAdminUser, terminoBusqueda, setTerminoBusqueda }) 
       </header>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="text-center w-100">
+          <Modal.Title className="text-center w-100 tinos">
             ¿Quieres ver Xtream ya?
             <br /> ¡Crea tu cuenta en 3 pasos!
           </Modal.Title>
@@ -129,7 +141,7 @@ const Menu = ({ adminUser, setAdminUser, terminoBusqueda, setTerminoBusqueda }) 
                 icon: "success",
               });
               reset();
-              handleClose()
+              handleClose();
             })}
           >
             <FormGroup className="mb-3" controlId="formBasicNombreUsuario">
@@ -203,10 +215,104 @@ const Menu = ({ adminUser, setAdminUser, terminoBusqueda, setTerminoBusqueda }) 
                 {errors.password?.message}
               </Form.Text>
             </Form.Group>
+            <hr />
+            <FormGroup>
+              <div
+                ref={termsRef}
+                className="terminos-condiciones"
+              >
+                <p className="Raleway">
+                  <strong>📜 Términos y Condiciones de Uso – Xtream </strong>
+                  <br />
+                  Bienvenido a Xtream, una aplicación que permite a los usuarios
+                  explorar, ver y gestionar contenido audiovisual. Al acceder o
+                  utilizar Xtream, usted acepta cumplir con los siguientes
+                  términos y condiciones. Si no está de acuerdo con ellos, por
+                  favor no utilice la aplicación.
+                </p>
+                <ol>
+                  <li>
+                    <strong>🧾Aceptacion de los Terminos: </strong><br />
+                    Al utilizar Xtream, usted reconoce haber leído, entendido
+                    y aceptado estos Términos y Condiciones, así como nuestra
+                    Política de Privacidad.
+                  </li>
+                  <li className="my-1">
+                    <strong>🎬Uso de la Aplicacion: </strong><br />
+                    Xtream está destinada exclusivamente para uso personal y no
+                    comercial. - El contenido disponible en Xtream es propiedad
+                    de sus respectivos titulares de derechos. No se permite la
+                    reproducción, distribución o modificación sin autorización.
+                    - Usted se compromete a no utilizar Xtream para actividades
+                    ilegales, fraudulentas o que infrinjan derechos de terceros.
+                  </li>
+                  <li className="my-1">
+                    <strong>👤 Registro y Cuenta: </strong><br />
+                    Para acceder a ciertas funciones,
+                    puede ser necesario crear una cuenta. - Usted es responsable
+                    de mantener la confidencialidad de sus credenciales de
+                    acceso. - Xtream se reserva el derecho de suspender o
+                    eliminar cuentas que violen estos términos.
+                  </li>
+                  <li className="my-1">
+                    <strong>📶 Disponibilidad del Servicio: </strong><br /> 
+                    Xtream no garantiza que el
+                    servicio esté disponible de forma ininterrumpida o libre de
+                    errores. - Nos reservamos el derecho de modificar, suspender
+                    o discontinuar la aplicación en cualquier momento sin previo
+                    aviso.
+                  </li>
+                  <li className="my-1">
+                    <strong>📄 Contenido de Terceros: </strong><br />
+                    Xtream puede incluir enlaces o
+                    contenido de terceros. No nos responsabilizamos por la
+                    exactitud o legalidad de dicho contenido. - El uso de
+                    servicios de terceros está sujeto a sus propios términos y
+                    condiciones.
+                  </li>
+                  <li className="my-1">
+                    <strong>🔐 Privacidad: </strong><br />
+                    El uso de Xtream implica la recopilación y
+                    tratamiento de ciertos datos personales. Para más
+                    información, consulte nuestra <NavLink to={"/*"} onClick={handleClose}>Politica de Privacidad</NavLink>.
+                  </li>
+                  <li className="my-1">
+                    <strong>⚖️ Limitación de Responsabilidad: </strong><br />
+                    Xtream no será
+                    responsable por daños directos, indirectos, incidentales o
+                    consecuentes derivados del uso o imposibilidad de uso de la
+                    aplicación.
+                  </li>
+                  <li className="my-1">
+                    <strong>📍 Legislación Aplicable: </strong><br />
+                    Estos términos se rigen por las
+                    leyes de Argentina. - Cualquier disputa será
+                    resuelta ante los tribunales competentes de dicha
+                    jurisdicción.
+                  </li>
+                  <li className="my-1">
+                    <strong>✉️ Contacto: </strong><br />
+                    cualquier consulta relacionada con estos
+                    Términos y Condiciones, puede contactarnos a través de:
+                    <Link to={"/contacto"} onClick={handleClose}> Contacto</Link>.
+                  </li>
+                </ol>
+              </div>
+
+              <Form.Check
+                type="checkbox"
+                label="He leído y acepto los Términos y Condiciones"
+                checked={aceptarTerminos}
+                onChange={handleCheckboxChange}
+              />
+            </FormGroup>
             <FormGroup className="d-flex justify-content-end">
               <Button
-                className="tinos" variant="success"
-                onClick={handleShow} type="submit"
+                className="tinos"
+                variant="success"
+                onClick={handleShow}
+                type="submit"
+                disabled={!aceptarTerminos}
               >
                 Crea tu cuenta
               </Button>
