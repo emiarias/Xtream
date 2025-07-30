@@ -181,9 +181,9 @@ const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula, editarPeli
                   "La descripcion breve debe tener al menos 2 caracteres",
               },
               maxLength: {
-                value: 100,
+                value: 150,
                 message:
-                  "La descripcion breve debe tener como maximo 100 caracteres",
+                  "La descripcion breve debe tener como maximo 150 caracteres",
               },
             })}
           />
