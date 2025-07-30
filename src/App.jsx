@@ -6,7 +6,7 @@ import Inicio from "./components/pages/Inicio";
 import Contacto from "./components/pages/Contacto";
 import Login from "./components/pages/Login";
 import DetallePelicula from "./components/pages/DetallePelicula";
-import Error404 from "./Components/pages/Error404";
+import Error404 from "./components/pages/Error404";
 import Administrador from "./components/pages/Administrador";
 import AcercaDeNosotros from "./components/pages/AcercaDeNosotros";
 import { BrowserRouter, Route, Routes } from "react-router";
