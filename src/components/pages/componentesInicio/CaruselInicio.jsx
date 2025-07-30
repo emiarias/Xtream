@@ -1,19 +1,10 @@
 import Carousel from 'react-bootstrap/Carousel';
 import '../../../Index.css';
-
 const CaruselInicio = () => {
 
   return (
     <>
       <Carousel>
-        <Carousel.Item>
-          <img
-            className='w-100 img-fluid'
-            style={{ maxHeight: '400px', objectFit: 'cover' }}
-            src="https://t2.tudocdn.net/687837?w=824&h=494"
-            alt="historias de superueres"
-          />
-        </Carousel.Item>
         <Carousel.Item>
           <img
             className='w-100 img-fluid'

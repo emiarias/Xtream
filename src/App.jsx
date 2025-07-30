@@ -28,6 +28,7 @@ function App() {
 
   const crearPeliculas = (peliculaNueva) => {
     peliculaNueva.id = uuidv4()
+    peliculaNueva.destacada = false;
 
     setPeliculas([...peliculas,peliculaNueva])
     return true
@@ -44,6 +45,16 @@ function App() {
     return true
   }
 
+  const destacarPelicula = (idPelicula) => {
+  const peliculaDestacada = peliculas.map((itemPelicula) => {
+    if (itemPelicula.id === idPelicula) {
+      return { ...itemPelicula, destacada: true };
+    } else {
+      return { ...itemPelicula, destacada: false };
+    }
+  });
+  setPeliculas(peliculaDestacada);
+};
   const editarPelicula = (idPelicula, peliculaActualizado) => {
     const peliculasEditadas = peliculas.map((itemPelicula)=>{
       if(itemPelicula.id==idPelicula){
@@ -83,7 +94,7 @@ function App() {
               path="/administrador"
               element={<ProtectorAdmin adminUser={adminUser}></ProtectorAdmin>}
             >
-              <Route index element={<Administrador peliculas={peliculas} setPeliculas={setPeliculas} borrarPelicula={borrarPelicula}></Administrador>}></Route>
+              <Route index element={<Administrador peliculas={peliculas} setPeliculas={setPeliculas} borrarPelicula={borrarPelicula} destacarPelicula={destacarPelicula}></Administrador>}></Route>
 
               <Route
                 path="crear"
