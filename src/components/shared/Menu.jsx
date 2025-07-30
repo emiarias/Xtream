@@ -12,7 +12,6 @@ import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
 
 const Menu = ({ adminUser, setAdminUser }) => {
-  const [scrollAlFinal, setScrollAlFinal] = useState(false);
   const [aceptarTerminos, setAceptarTerminos] = useState(false);
   const termsRef = useRef(null);
 
@@ -22,13 +21,6 @@ const Menu = ({ adminUser, setAdminUser }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  const handleScroll = () => {
-    const el = termsRef.current;
-    if (el.scrollTop + el.clientHeight >= el.scrollHeight) {
-      setScrollAlFinal(true);
-    }
-  };
 
   const handleCheckboxChange = (e) => {
     setAceptarTerminos(e.target.checked);
@@ -220,7 +212,6 @@ const Menu = ({ adminUser, setAdminUser }) => {
             <FormGroup>
               <div
                 ref={termsRef}
-                onScroll={handleScroll}
                 className="terminos-condiciones"
               >
                 <p className="Raleway">
@@ -304,7 +295,6 @@ const Menu = ({ adminUser, setAdminUser }) => {
               <Form.Check
                 type="checkbox"
                 label="He leído y acepto los Términos y Condiciones"
-                disabled={!scrollAlFinal}
                 checked={aceptarTerminos}
                 onChange={handleCheckboxChange}
               />

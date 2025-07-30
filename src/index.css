@@ -86,8 +86,7 @@ main {
 }
 
 .terminos-condiciones {
-  max-height: 200px;
-  overflow-y: scroll;
+  overflow-y: auto;
   border: 1px dotted #00e701;
   padding: 10px;
   margin-bottom: 10px;
