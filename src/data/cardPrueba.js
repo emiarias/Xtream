@@ -11,7 +11,8 @@ export const cardsData = [
   genre: "Acción",
   year: 2018,
   director: "Anthony y Joe Russo",
-  trailer: "https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+  trailer: "https://www.youtube.com/watch?v=6ZfuNTqbHE8",
+      destacada: true,
 },
 {
   id: 2,
@@ -24,7 +25,8 @@ export const cardsData = [
   genre: "Acción",
   year: 2019,
   director: "Anthony y Joe Russo",
-  trailer: "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+  trailer: "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+      destacada: false,
 },
 {
     id: 3,
@@ -37,7 +39,8 @@ export const cardsData = [
     genre: "Ciencia ficción",
     year: 1999,
     director: "Lana y Lilly Wachowski",
-    trailer: "https://www.youtube.com/watch?v=vKQi3bBA1y8"
+    trailer: "https://www.youtube.com/watch?v=vKQi3bBA1y8",
+      destacada: false,
   },
   {
     id: 4,
@@ -50,7 +53,8 @@ export const cardsData = [
     genre: "Drama",
     year: 1972,
     director: "Francis Ford Coppola",
-    trailer: "https://www.youtube.com/watch?v=sY1S34973zA"
+    trailer: "https://www.youtube.com/watch?v=sY1S34973zA",
+      destacada: false,
   },
   {
     id: 5,
@@ -63,7 +67,8 @@ export const cardsData = [
     genre: "Ciencia ficción",
     year: 2014,
     director: "Christopher Nolan",
-    trailer: "https://www.youtube.com/watch?v=UoSSbmD9vqc"
+    trailer: "https://www.youtube.com/watch?v=UoSSbmD9vqc",
+      destacada: false,
   },
   {
     id: 6,
@@ -76,7 +81,8 @@ export const cardsData = [
     genre: "Terror",
     year: 2019,
     director: "Bong Joon-ho",
-    trailer: "https://www.youtube.com/watch?v=isOGD_7hNIY"
+    trailer: "https://www.youtube.com/watch?v=isOGD_7hNIY",
+      destacada: false,
   },
   {
     id: 7,
@@ -89,7 +95,8 @@ export const cardsData = [
     genre: "Crimen",
     year: 1994,
     director: "Quentin Tarantino",
-    trailer: "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
+    trailer: "https://www.youtube.com/watch?v=s7EdQ4FqbhY",
+      destacada: false,
   }, 
 {
   id: 8,
@@ -102,7 +109,8 @@ export const cardsData = [
   genre: "Drama",
   year: 1994,
   director: "Frank Darabont",
-  trailer: "https://www.youtube.com/watch?v=6hB3S9bIaco"
+  trailer: "https://www.youtube.com/watch?v=6hB3S9bIaco",
+      destacada: false,
 },
 // series
 {
@@ -116,7 +124,8 @@ export const cardsData = [
   genre: "Crimen",
   year: 2013,
   director: "Steven Knight",
-  trailer: "https://www.youtube.com/watch?v=oVzVdvGIC7U"
+  trailer: "https://www.youtube.com/watch?v=oVzVdvGIC7U",
+      destacada: false,
 },
 {
   id: 10,
@@ -129,7 +138,8 @@ export const cardsData = [
   genre: "Drama",
   year: 2013,
   director: "Michael Hirst",
-  trailer: "https://www.youtube.com/watch?v=2HeycBS4edw"
+  trailer: "https://www.youtube.com/watch?v=2HeycBS4edw",
+      destacada: false,
 },
 {
   id: 11,
@@ -142,7 +152,8 @@ export const cardsData = [
   genre: "Fantasía",
   year: 2011,
   director: "David Benioff & D. B. Weiss (showrunners)",
-  trailer: "https://www.youtube.com/watch?v=IznyEBoUcuk" 
+  trailer: "https://www.youtube.com/watch?v=IznyEBoUcuk" ,
+      destacada: false,
 },
 {
   id: 12,
@@ -155,7 +166,8 @@ export const cardsData = [
   genre: "Drama",
   year: 2021,
   director: "Hwang Dong-hyuk",
-  trailer: "https://www.youtube.com/watch?v=cTpISvwP9DM"
+  trailer: "https://www.youtube.com/watch?v=cTpISvwP9DM",
+      destacada: false,
 },
 // surtidas
 {
@@ -169,7 +181,8 @@ export const cardsData = [
   genre: "Acción",
   year: 2012,
   director: "Joss Whedon",
-  trailer: "https://www.youtube.com/watch?v=eOrNdBpGMv8"
+  trailer: "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+      destacada: false,
 }
 ,{
   id: 14,
@@ -182,7 +195,8 @@ export const cardsData = [
   genre: "Animación",
   year: 2015,
   director: "Pierre Coffin, Kyle Balda",
-  trailer: "https://www.youtube.com/watch?v=LSw_te6wexM"
+  trailer: "https://www.youtube.com/watch?v=LSw_te6wexM",
+      destacada: false,
 }, 
 
 {
@@ -196,7 +210,8 @@ export const cardsData = [
   genre: "Animación",
   year: 2013,
   director: "Kirk DeMicco, Chris Sanders",
-  trailer: "https://www.youtube.com/watch?v=lNk1XIejGRA"
+  trailer: "https://www.youtube.com/watch?v=lNk1XIejGRA",
+      destacada: false,
 }
 
 ];

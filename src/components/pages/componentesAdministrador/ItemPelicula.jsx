@@ -1,8 +1,8 @@
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router';
+import { Link, useParams } from 'react-router';
 import Swal from 'sweetalert2';
 
-const ItemPelicula = ({ pelicula, fila, borrarPelicula }) => {
+const ItemPelicula = ({ pelicula, fila, borrarPelicula, destacarPelicula}) => {
 
   const eliminarPelicula = () =>{
     Swal.fire({
@@ -32,7 +32,7 @@ const ItemPelicula = ({ pelicula, fila, borrarPelicula }) => {
     }
   }
 });
-  }  
+  }
 
     return (
         <tr>
@@ -48,8 +48,11 @@ const ItemPelicula = ({ pelicula, fila, borrarPelicula }) => {
         <Link to={`/administrador/editar/${pelicula.id}`} className="btn btn-warning me-lg-2">
           <i className="bi bi-pencil-square"></i>
         </Link>
-        <Button variant="danger" onClick={eliminarPelicula}>
+        <Button variant="danger" onClick={eliminarPelicula} className='me-lg-2'>
           <i className="bi bi-trash"></i>
+        </Button>
+        <Button variant="transparent" onClick={() => destacarPelicula(pelicula.id)}>
+          {pelicula.destacada? <i className="bi bi-star-fill fs-4 text-success"></i> : <i className="bi bi-star text-success"></i>}
         </Button>
         </div>
       </td>
