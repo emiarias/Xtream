@@ -70,7 +70,6 @@ main {
 .imagen-detalle-pelicula {
   filter: grayscale(60%);
   transition: 400ms;
-  max-height: 70vh;
 }
 
 .imagen-detalle-pelicula:hover {
