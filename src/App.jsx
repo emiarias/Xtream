@@ -20,6 +20,7 @@ function App() {
   const [adminUser, setAdminUser] = useState(userLogueado);
   const peliculasLocalstorage = JSON.parse(localStorage.getItem('carteleraPeliculas')) || []
   const [peliculas, setPeliculas] = useState(peliculasLocalstorage)
+  const [terminoBusqueda, setTerminoBusqueda] = useState('');
   
     useEffect(()=>{
     localStorage.setItem('carteleraPeliculas', JSON.stringify(peliculas))
@@ -54,13 +55,28 @@ function App() {
   });
   setPeliculas(peliculaDestacada);
 };
+  const editarPelicula = (idPelicula, peliculaActualizado) => {
+    const peliculasEditadas = peliculas.map((itemPelicula)=>{
+      if(itemPelicula.id==idPelicula){
+        return {
+          ...itemPelicula, 
+          ...peliculaActualizado
+        }
+      }else{
+        return itemPelicula
+      }
+    })
+    setPeliculas(peliculasEditadas)
+    return true
+  }
+
   return (
     <>
       <BrowserRouter>
-        <Menu adminUser={adminUser} setAdminUser={setAdminUser}></Menu>
+        <Menu adminUser={adminUser} setAdminUser={setAdminUser} setTerminoBusqueda={setTerminoBusqueda} terminoBusqueda={terminoBusqueda}></Menu>
         <main>
           <Routes>
-            <Route path="/" element={<Inicio peliculas={peliculas}></Inicio>}></Route>
+            <Route path="/" element={<Inicio peliculas={peliculas} terminoBusqueda={terminoBusqueda}></Inicio>}></Route>
             <Route
               path="/login"
               element={<Login setAdminUser={setAdminUser}></Login>}
@@ -85,8 +101,8 @@ function App() {
                 element={<FormularioPelicula titulo={'Añadir película/serie'} crearPeliculas={crearPeliculas}></FormularioPelicula>}
               ></Route>
               <Route
-                path="editar"
-                element={<FormularioPelicula titulo={'Editar película/serie'}></FormularioPelicula>}
+                path="editar/:id"
+                element={<FormularioPelicula titulo={'Editar película/serie'} buscarPelicula={buscarPelicula} editarPelicula={editarPelicula}></FormularioPelicula>}
               ></Route>
             </Route>
             <Route path="/*" element={<Error404></Error404>}></Route>
