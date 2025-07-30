@@ -35,7 +35,13 @@ main {
 
 .buscadorNav {
   background: #fff !important;
+  color: #000 !important;
 }
+
+.buscadorNav::placeholder {
+  color: rgba(10, 14, 15) !important;
+}
+
 .boton-hamburguesa {
   background-color: rgba(10, 14, 15) !important;
   border: 1px solid #fff !important;
