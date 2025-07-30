@@ -44,6 +44,21 @@ function App() {
     return true
   }
 
+  const editarPelicula = (idPelicula, peliculaActualizado) => {
+    const peliculasEditadas = peliculas.map((itemPelicula)=>{
+      if(itemPelicula.id==idPelicula){
+        return {
+          ...itemPelicula, 
+          ...peliculaActualizado
+        }
+      }else{
+        return itemPelicula
+      }
+    })
+    setPeliculas(peliculasEditadas)
+    return true
+  }
+
   return (
     <>
       <BrowserRouter>
@@ -75,8 +90,8 @@ function App() {
                 element={<FormularioPelicula titulo={'Añadir película/serie'} crearPeliculas={crearPeliculas}></FormularioPelicula>}
               ></Route>
               <Route
-                path="editar"
-                element={<FormularioPelicula titulo={'Editar película/serie'}></FormularioPelicula>}
+                path="editar/:id"
+                element={<FormularioPelicula titulo={'Editar película/serie'} buscarPelicula={buscarPelicula} editarPelicula={editarPelicula}></FormularioPelicula>}
               ></Route>
             </Route>
             <Route path="/*" element={<Error404></Error404>}></Route>

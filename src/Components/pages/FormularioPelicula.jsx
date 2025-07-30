@@ -1,9 +1,10 @@
+import { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import Swal from "sweetalert2";
 
-const FormularioPelicula = ({ titulo, crearPeliculas }) => {
+const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula, editarPelicula }) => {
   const {
     register,
     handleSubmit,
@@ -11,6 +12,24 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
     formState: { errors },
     setValue,
   } = useForm();
+
+  const {id} = useParams()
+  const navegacion = useNavigate()
+
+  useEffect(()=>{
+    if(titulo==="Editar película/serie"){
+      const peliculaBuscada = buscarPelicula(id);
+      setValue("title", peliculaBuscada.title);
+      setValue("year", peliculaBuscada.year);
+      setValue("director", peliculaBuscada.director);
+      setValue("genre", peliculaBuscada.genre);
+      setValue("type", peliculaBuscada.type);
+      setValue("image", peliculaBuscada.image);
+      setValue("trailer", peliculaBuscada.trailer);
+      setValue("description_breve", peliculaBuscada.description_breve);
+      setValue("description_amplia", peliculaBuscada.description_amplia);
+    }
+  },[])
 
   const onSubmit = (pelicula) => {
     if (titulo === "Añadir película/serie") {
@@ -23,6 +42,15 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
         });
         reset();
       }
+    } else{
+      if (editarPelicula(id, pelicula)) {
+        Swal.fire({
+          title: "Pelicula editada",
+          text: `La pelicula/serie ${pelicula.title} fue editada correctamente.`,
+          icon: "success",
+        });
+      }
+      navegacion('/administrador')
     }
   }
 
@@ -133,6 +161,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
           >
             <option value="">Seleccione una opcion</option>
             <option value="Acción">Acción</option>
+            <option value="Animación">Animación</option>
             <option value="Aventura">Aventura</option>
             <option value="Ciencia ficción">Ciencia Ficción</option>
             <option value="Crimen">Crimen</option>
