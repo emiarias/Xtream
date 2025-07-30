@@ -27,6 +27,7 @@ function App() {
 
   const crearPeliculas = (peliculaNueva) => {
     peliculaNueva.id = uuidv4()
+    peliculaNueva.destacada = false;
 
     setPeliculas([...peliculas,peliculaNueva])
     return true

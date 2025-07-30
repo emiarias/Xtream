@@ -24,7 +24,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
         reset();
       }
     }
-  }
+  };
 
   return (
     <section className="container my-5">
@@ -47,9 +47,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
               },
             })}
           />
-          <Form.Text className="text-danger">
-            {errors.title?.message}
-          </Form.Text>
+          <Form.Text className="text-danger">{errors.title?.message}</Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Director*</Form.Label>
@@ -89,9 +87,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
               },
             })}
           />
-          <Form.Text className="text-danger">
-            {errors.year?.message}
-          </Form.Text>
+          <Form.Text className="text-danger">{errors.year?.message}</Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Poster*</Form.Label>
@@ -107,9 +103,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
               },
             })}
           />
-          <Form.Text className="text-danger">
-            {errors.image?.message}
-          </Form.Text>
+          <Form.Text className="text-danger">{errors.image?.message}</Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Tipo*</Form.Label>
@@ -142,9 +136,7 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             <option value="Romance">Romance</option>
             <option value="Terror">Terror</option>
           </Form.Select>
-          <Form.Text className="text-danger">
-            {errors.genre?.message}
-          </Form.Text>
+          <Form.Text className="text-danger">{errors.genre?.message}</Form.Text>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Descripcion breve*</Form.Label>
@@ -202,7 +194,8 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
             {...register("trailer", {
               required: "La url del trailer es un dato obligatorio",
               pattern: {
-                value: /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/,
+                value:
+                  /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/,
                 message:
                   "El trailer debe ser una url de un video de YouTube valido",
               },
@@ -216,7 +209,9 @@ const FormularioPelicula = ({ titulo, crearPeliculas }) => {
           <Button variant="success" type="submit">
             Guardar
           </Button>
-          <Link className="btn btn-danger" to={'/administrador'}>Cancelar</Link>
+          <Link className="btn btn-danger" to={"/administrador"}>
+            Cancelar
+          </Link>
         </Form.Group>
       </Form>
     </section>
