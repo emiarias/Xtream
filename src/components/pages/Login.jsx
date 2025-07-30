@@ -1,6 +1,7 @@
-import { Col, Form, Row, Button } from "react-bootstrap";
+import { Col, Form, Row, Button, Modal } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
+import { useState } from "react";
 
 const Login = ({setAdminUser}) => {
   const {
@@ -10,6 +11,9 @@ const Login = ({setAdminUser}) => {
   } = useForm();
 
   const navegacion = useNavigate()
+  const [mostrarModal, setMostrarModal] = useState(false);
+  const [mostrarModalRecuperar, setMostrarModalRecuperar] = useState(false);
+
 
   const iniciarSesion = (usuario) => {
     if(
@@ -19,9 +23,10 @@ const Login = ({setAdminUser}) => {
       setAdminUser(true)
       sessionStorage.setItem("userKey", true)
       navegacion("/administrador")
-    }
+    }else {
+    setMostrarModal(true); // mostrar el modal si las credenciales son incorrectas
   }
-
+  }
   return (
     <section className="container">
       <Row xs={1} md={2} className="align-items-center">
@@ -90,11 +95,53 @@ const Login = ({setAdminUser}) => {
             <Button variant="success" type="submit" className="mt-4">
               Iniciar sesión
             </Button>
+            <p className="mt-3">
+  ¿Olvidaste tu contraseña?{" "}
+  <a href="#" onClick={(e) => {
+    e.preventDefault();
+    setMostrarModalRecuperar(true);
+  }}>
+    Recuperala acá
+  </a>
+</p>
           </Form>
         </Col>
         <Col>
         <img src="https://ca-times.brightspotcdn.com/dims4/default/f507332/2147483647/strip/true/crop/3000x2000+0+0/resize/1200x800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F08%2Fa2%2Fe47e812707a40774a24e6e8f6657%2F95ecd52380214c35b1cca6dbc1d8a643" alt="Últimos estrenos de 2025" className="img-fluid rounded"/></Col>
       </Row>
+      <Modal show={mostrarModal} onHide={() => setMostrarModal(false)} centered>
+  <Modal.Header closeButton>
+    <Modal.Title>Error de inicio de sesión</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>
+    Usuario o contraseña incorrectos. Por favor, revisá tus datos.
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="secondary" onClick={() => setMostrarModal(false)}>
+      Cerrar
+    </Button>
+  </Modal.Footer>
+</Modal>
+<Modal show={mostrarModalRecuperar} onHide={() => setMostrarModalRecuperar(false)} centered>
+  <Modal.Header closeButton>
+    <Modal.Title>Recuperar contraseña</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>
+    <p>Para recuperar tu contraseña seguí estos pasos:</p>
+    <ol>
+      <li>Enviá un correo a <strong>soporte@xtream.com</strong></li>
+      <li>Indicá tu nombre completo y correo registrado</li>
+      <li>En breve te llegará un correo con instrucciones para restablecer tu contraseña</li>
+    </ol>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="secondary" onClick={() => setMostrarModalRecuperar(false)}>
+      Cerrar
+    </Button>
+  </Modal.Footer>
+</Modal>
+
+
     </section>
   );
 };
